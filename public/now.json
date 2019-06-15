@@ -1,5 +1,6 @@
 {
     "version": 2,
+    "alias": "brandonelhaj-knowyourgov",
     "name": "knowyourgov",
     "routes": [
         {
