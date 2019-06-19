@@ -19,10 +19,10 @@ class AddressSearchbox extends Component {
         this.setState({
             [name]: value
         })
-        // const url = `https://www.googleapis.com/civicinfo/v2/representatives?address=${this.state.address} ${this.state.city}, ${this.state.stateCode}&includeOffices=true&roles=legislatorLowerBody&key=AIzaSyAdhosVMLAvrsS4Gs2wjWLrAvWSHCOsG_A`
+        // const url = `https://www.googleapis.com/civicinfo/v2/representatives?address=${this.state.address} ${this.state.city}, ${this.state.stateCode}&includeOffices=true&roles=legislatorLowerBody&key=`
        
         // console.log('url', url)
-        fetch('https://www.googleapis.com/civicinfo/v2/representatives?address=1414 SE 23rd Ave Portland, OR&includeOffices=true&roles=legislatorLowerBody&key=AIzaSyAdhosVMLAvrsS4Gs2wjWLrAvWSHCOsG_A')
+        fetch('https://www.googleapis.com/civicinfo/v2/representatives?address=1414 SE 23rd Ave Portland, OR&includeOffices=true&roles=legislatorLowerBody&key=')
         .then(results => results.json())
         .then(resultsJson => console.log(resultsJson))
     }  
