@@ -39,10 +39,12 @@ export default class Navigation extends Component {
         return (
             <>
                 <nav className="Navigation">
-                    <h1>KnowYourGov</h1>
-                    
+                    <h1 className="Logo-text"><Link to='/'>KnowYourGov</Link></h1>
+                    <ul className="Navigation-items">
+                        <li><Link to='/login'>Login</Link></li>
+                        <li className="Nav_space"><Link to='/register'>Register</Link></li>
+                    </ul>
                 </nav>
-
             </>
         )
     }

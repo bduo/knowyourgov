@@ -1,0 +1,29 @@
+.Welcome-text {
+    font-family: 'Bungee Shade', cursive;
+    font-size: 70px;
+    text-align: center;
+    width: 100%;
+    margin-bottom: -30px;
+    color: #fff;
+}
+
+.Welcome-question {
+    font-family: 'Roboto', sans-serif;
+    margin-top: 65px;
+    text-align: center;
+    font-size: 25px;
+    color: #fff;
+}
+
+.App-info-text {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.Background-photo {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}

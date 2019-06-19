@@ -1,0 +1,28 @@
+.Navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10px 0 15px;
+}
+
+.Navigation-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin-top: 7px;
+}
+
+ul.Navigation-items {
+    padding-left: 0;
+}
+
+.Nav_space {
+    margin-left: 10px;
+}
+
+.Logo-text {
+    font-size: 25px;
+}

@@ -1,0 +1,21 @@
+.Address_searchbox {
+    height: 40px;
+    width: 300px;
+    display: block;
+    margin: 0 auto;
+    padding-left: 20px;
+}
+
+.Address_search_submit {
+    height: 50px;
+    width: 300px;
+    border-radius: 10px;
+    background-color: #f25f5c;
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px;
+    color: #fff;
+}
+
+
+
