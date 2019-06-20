@@ -22,7 +22,7 @@ class AddressSearchbox extends Component {
         // const url = `https://www.googleapis.com/civicinfo/v2/representatives?address=${this.state.address} ${this.state.city}, ${this.state.stateCode}&includeOffices=true&roles=legislatorLowerBody&key=`
        
         // console.log('url', url)
-        fetch('https://www.googleapis.com/civicinfo/v2/representatives?address=1414 SE 23rd Ave Portland, OR&includeOffices=true&roles=legislatorLowerBody&key=')
+        fetch('https://www.googleapis.com/civicinfo/v2/representatives?address=2512 SE Madison St Portland, OR&includeOffices=true&roles=legislatorLowerBody&key=')
         .then(results => results.json())
         .then(resultsJson => console.log(resultsJson))
     }  
