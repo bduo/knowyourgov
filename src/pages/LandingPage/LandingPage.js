@@ -2,23 +2,53 @@ import React, { Component } from 'react'
 import SearchBox from '../../components/SearchBox/SearchBox'
 import './LandingPage.css'
 import hero from '../../images/hero.jpg'
+import Promise from 'promise'
 
 class LandingPage extends Component {
-    state = {reps: {} }
+    state = {
+        congress1: [],
+        congress2: [],
+        senator1: [],
+        senator2: [],
+        governor: [],
+     }
 
     componentDidMount() {
         this.handleSearch(' ')
     }
 
-    handleSearch = () => {
-        const url = `https://www.googleapis.com/civicinfo/v2/representatives?address=${this.state.address} ${this.state.city}, ${this.state.stateCode}&includeOffices=true&roles=legislatorLowerBody&key=`
-        
-        console.log('url', url)
-        fetch(url)
-        .then(results => results.json())
-        .then(resultsJson => console.log(resultsJson))
+    checkStatus = (response) => {
+        if (response.ok) {
+          return Promise.resolve(response);
+        } else {
+          return Promise.reject(new Error(response.statusText));
+        }
+    }
+      
+    parseJSON = (response) => {
+        return response.json();
     }
 
+    handleSearch = (address, city, stateCode ) => {
+        const urls = [`https://www.googleapis.com/civicinfo/v2/representatives?address=${address} ${city}, ${stateCode}&includeOffices=true&roles=legislatorLowerBody&key=`,
+        `https://www.googleapis.com/civicinfo/v2/representatives?address=${address} ${city}, ${stateCode}&includeOffices=true&roles=legislatorUpperBody&key=`,`https://www.googleapis.com/civicinfo/v2/representatives?address=${address} ${city}, ${stateCode}&includeOffices=true&roles=headOfGovernment&key=`]
+        
+        Promise.all(urls.map(url =>
+            fetch(url)
+            .then(response => response.json()) 
+            .catch(error => console.log('There was a problem!', error))               
+        ))
+            .then(data => {
+                this.setState({
+                    congress1: data[0].officials[0],
+                    congress2: data[0].officials[1],
+                    senator1: data[1].officials[0],
+                    senator2: data[1].officials[1],
+                    governor: data[2].officials[1],
+            })
+          })
+    }
+    
     render() {
         return (
             <div>
@@ -37,11 +67,14 @@ class LandingPage extends Component {
                         KnowYourGov is a way to stay informed about your government and who represents you in congress.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquet risus feugiat in ante metus dictum at.
                     </p> 
                 </section>
+                <p>{this.state.congress1.name}</p>
+                <p>{this.state.congress2.name}</p>
+                <p>{this.state.senator1.name}</p>
+                <p>{this.state.senator2.name}</p>
+                <p>{this.state.governor.name}</p>
             </div>
         )
     }
 }
-
-
 
 export default LandingPage

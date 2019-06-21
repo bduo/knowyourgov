@@ -19,16 +19,14 @@ class SearchBox extends Component {
     handleSubmit = (event) => {
         event.preventDefault()
         console.log('submitted')
-        this.props.handleSearch(this.state.address)
-        this.props.handleSearch(this.state.city)
-        this.props.handleSearch(this.state.stateCode)
+        this.props.handleSearch(this.state.address, this.state.city, this.state.stateCode)
         this.setState({address: ''})
         this.setState({city: ''})
         this.setState({stateCode: ''})
     }
     
     render() {
-       
+       console.log(this.props)
         return (
             <form id="Address_search_form" onSubmit={this.handleSubmit}>
                     <input 
