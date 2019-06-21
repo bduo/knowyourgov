@@ -1,18 +1,18 @@
 import React, {Component} from 'react'
 import { Route, Switch } from 'react-router-dom'
 import Navigation from '../Navigation/Navigation'
-import LandingPage from '../../routes/LandingPage/LandingPage'
-import LoginPage from '../../routes/LoginPage/LoginPage'
-import RegisterPage from '../../routes/RegisterPage/RegisterPage'
+import LandingPage from '../../pages/LandingPage/LandingPage'
+import LoginPage from '../../pages/LoginPage/LoginPage'
+import RegisterPage from '../../pages/RegisterPage/RegisterPage'
 // import Dashboard from '../../routes/Dashboard/Dashboard'
 // import ProfileSettings from '../../routes/ProfileSettings/ProfileSettings'
 // import Notifications from '../../routes/Notifications/Notifications'
 
-class App extends Component {
+class AppRouter extends Component {
     
   render() {
     return (
-      <div className='App'>
+      <div className='AppRouter'>
         <header className='App_navigation'>
           <Navigation />
         </header>
@@ -57,4 +57,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default AppRouter;

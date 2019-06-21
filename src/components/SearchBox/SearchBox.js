@@ -1,47 +1,36 @@
 import React, { Component } from 'react'
-import './AddressSearchbox.css'
+import './SearchBox.css'
 
-class AddressSearchbox extends Component {
+class SearchBox extends Component {
     state = {
         address: '',
         city: '',
         stateCode: '',
-        reps: {}
     }
-
-    // componentDidMount() {
-    //     fetch('https://www.googleapis.com/civicinfo/v2/representatives?')
-
-    // }
 
     handleChange = (event) => {
         const{ name, value } = event.target
         this.setState({
             [name]: value
         })
-        // const url = `https://www.googleapis.com/civicinfo/v2/representatives?address=${this.state.address} ${this.state.city}, ${this.state.stateCode}&includeOffices=true&roles=legislatorLowerBody&key=`
-       
-        // console.log('url', url)
-        fetch('https://www.googleapis.com/civicinfo/v2/representatives?address=2512 SE Madison St Portland, OR&includeOffices=true&roles=legislatorLowerBody&key=')
-        .then(results => results.json())
-        .then(resultsJson => console.log(resultsJson))
-    }  
-
-    // 
-
+        console.log(name, value)
+    }
+ 
     handleSubmit = (event) => {
         event.preventDefault()
         console.log('submitted')
-        event.target.address = ''
-        event.target.city = ''
-        event.target.stateCode = ''
+        this.props.handleSearch(this.state.address)
+        this.props.handleSearch(this.state.city)
+        this.props.handleSearch(this.state.stateCode)
+        this.setState({address: ''})
+        this.setState({city: ''})
+        this.setState({stateCode: ''})
     }
     
-    
-    
     render() {
+       
         return (
-            <form className="Address_search_form" onSubmit={this.handleSubmit}>
+            <form id="Address_search_form" onSubmit={this.handleSubmit}>
                     <input 
                         type="text"
                         name="address"
@@ -67,12 +56,9 @@ class AddressSearchbox extends Component {
                         onChange={this.handleChange}
                     />
                     <input type="submit" value="FIND YOUR REPS" className="Address_search_submit" />
-                      
             </form>
         )
+        }
     }
-}
 
-
-
-export default AddressSearchbox
+export default SearchBox
