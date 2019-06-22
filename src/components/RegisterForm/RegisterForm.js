@@ -50,7 +50,7 @@ export default class RegisterForm extends Component {
                         </Input>    
                     </label>
                     <Button type="submit">
-                        SUBMIT
+                        Register
                     </Button>    
                 </form>
             </section>

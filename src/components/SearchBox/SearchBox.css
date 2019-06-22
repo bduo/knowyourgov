@@ -5,17 +5,35 @@
     margin: 0 auto;
     padding-left: 20px;
     margin-bottom: 20px;
+    background-color: #f6f4f3;
+    color: #f25f5c;
+    border-radius: 10px;
+    border: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+input::placeholder {
+    color: #f25f5c;
+}
+
+.Address_searchbox:focus {
+    outline: none !important;
+    border:1px solid #f25f5c;
+    box-shadow: 0 0 10px #f25f5c;
+    border-radius: 10px;
 }
 
 .Address_search_submit {
     height: 50px;
-    width: 300px;
+    width: 325px;
     border-radius: 10px;
     background-color: #f25f5c;
     display: block;
     margin: 0 auto;
     margin-top: 50px;
     color: #fff;
+    border: none;
+    font-family: 'Roboto', sans-serif;
 }
 
 

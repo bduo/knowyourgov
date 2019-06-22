@@ -1,0 +1,23 @@
+footer {
+    display: flex;
+}
+
+.column {
+    flex: 2;
+}
+
+.vote-button {
+    height: 75px;
+    width: 150px;
+    background-color: #f6f4f3;
+    font-family: 'Bungee Shade', cursive;
+    color: #f25f5c;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.disclaimer {
+    text-align: center;
+}

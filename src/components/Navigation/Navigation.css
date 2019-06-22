@@ -4,6 +4,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 15px 10px 0 15px;
+    font-family: 'Roboto', sans-serif;
 }
 
 .Navigation-items {
@@ -17,6 +18,10 @@
 
 ul.Navigation-items {
     padding-left: 0;
+}
+
+a {
+    text-decoration: none;
 }
 
 .Nav_space {
