@@ -49,7 +49,7 @@ class SearchBox extends Component {
                         type="text"
                         name="stateCode"
                         value={this.state.stateCode} 
-                        placeholder="Enter abbreviated state" 
+                        placeholder="Enter your state" 
                         className="Address_searchbox" 
                         onChange={this.handleChange}
                     />
