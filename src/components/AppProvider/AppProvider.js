@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Redirect } from 'react-router'
+import { withRouter } from 'react-router'
 import Promise from 'promise'
 
 
@@ -19,12 +19,14 @@ class AppProvider extends Component {
         governor: [],
         governorAddress: [],
         isSubmitted: false,
-        redirectToGuest: false,
      }
 
-    // componentDidMount() {
-    //     this.handleSearch(' ')
-    // }
+    componentDidUpdate(prevProps, prevState) {
+        const { history } = this.props;
+        if (prevState.state !== this.state) {
+            history.push('/guest')
+        }
+    }
 
     checkStatus = (response) => {
         if (response.ok) {
@@ -61,19 +63,18 @@ class AppProvider extends Component {
                     senator2Address: data[1].officials[1].address[1],
                     governor: data[2].officials[1],
                     governorAddress: data[2].officials[1].address[0],
-                    redirectToGuest: true,
             })
           })
           
     }
 
     
-    redirectSearch = () => {
-        const redirectToReferrer = this.state.redirectToGuest
-        if(redirectToReferrer === true) {
-            <Redirect from='/' to='/guest' />
-        }
-    }
+    // redirectSearch = () => {
+    //     const redirectToReferrer = this.state.redirectToGuest
+    //     if(redirectToReferrer === true) {
+    //         <Redirect from='/' to='/guest' />
+    //     }
+    // }
 
 
     render() {
@@ -86,7 +87,6 @@ class AppProvider extends Component {
                     },
                     actions: {
                         handleSearch: this.handleSearch,
-                        redirectSearch: this.redirectSearch
                     },
                 }}>
                     
@@ -97,4 +97,4 @@ class AppProvider extends Component {
 
 }
 
-export default AppProvider
+export default withRouter(AppProvider)
