@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import'./Navigation.css'
+import TokenService from '../../services/token-service';
 
 export default class Navigation extends Component {
 
     handleUserLogout = () => {
-
+        TokenService.clearAuthToken()
     }
 
     renderLoginLink() {
@@ -15,7 +16,8 @@ export default class Navigation extends Component {
                     to='/login'>
                     Login
                 </Link>
-                <Link 
+                <Link
+                    className="Nav-space" 
                     to='/register'>
                     Register
                 </Link>
@@ -41,8 +43,7 @@ export default class Navigation extends Component {
                 <nav className="Navigation">
                     <h1 className="Logo-text"><Link to='/'>KnowYourGov</Link></h1>
                     <ul className="Navigation-items">
-                        <li><Link to='/login'>Login</Link></li>
-                        <li className="Nav_space"><Link to='/register'>Register</Link></li>
+                        {TokenService.hasAuthToken() ? this.renderLogoutLink() : this.renderLoginLink()}
                     </ul>
                 </nav>
             </>

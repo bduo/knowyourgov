@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import TokenService from '../../services/token-service'
 import { Button, Input } from '../../helpers/Helpers'
+import AuthApiService from '../../services/auth-api-service'
 import './RegisterForm.css'
 
 export default class RegisterForm extends Component {
@@ -14,13 +14,19 @@ export default class RegisterForm extends Component {
         event.preventDefault()
         const { user_name, password } = event.target
 
-        TokenService.saveAuthToken(
-            TokenService.makeBasicAuthToken(user_name.value, password.value)
-        )
-
-        user_name.value = ''
-        password.value = ''
-        this.props.onRegistrationSuccess()
+       this.setState({ error: null })
+       AuthApiService.postUser({
+           user_name: user_name.value,
+           password: password.value,
+       })
+        .then(user => {
+            user_name.value = ''
+            password.value = ''
+            this.props.onRegistrationSuccess()
+        })
+        .catch(response => {
+            this.setState({ error: response.error })
+        })
     }
 
     render() {
@@ -30,28 +36,26 @@ export default class RegisterForm extends Component {
                 <form 
                 className="Register-form"
                 onSubmit={this.handleSubmit}>
-                    <div role="alert">
-                        {error && <p className="red">{error}</p>}
-                    </div>
-                    <label className="Username">Username:
+                    <label className="Username">Username</label>
                         <Input
                         name="user_name" 
                         type="text"  
                         required 
                         id="RegisterForm_user_name">
                         </Input>    
-                    </label>
-                    <label className="Password">Password:
+                    <label className="Password">Password</label>
                         <Input
                         type="password"
                         name="password" 
                         required 
                         id="RegisterForm_password">
                         </Input>    
-                    </label>
                     <Button type="submit">
                         Register
-                    </Button>    
+                    </Button>
+                    <div role="alert">
+                        {error && <p className="red">{error}</p>}
+                    </div>    
                 </form>
             </section>
         )

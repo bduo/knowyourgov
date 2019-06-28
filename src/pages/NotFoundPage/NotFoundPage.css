@@ -1,0 +1,12 @@
+.NotFoundPage {
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    text-align: center;
+}
+
+.Status-code {
+    font-family: 'Bungee Shade', cursive;
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+

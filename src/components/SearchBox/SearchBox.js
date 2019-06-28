@@ -53,7 +53,7 @@ class SearchBox extends Component {
                         className="Address_searchbox" 
                         onChange={this.handleChange}
                     />
-                    <input type="submit" value="FIND YOUR REPS" className="Address_search_submit" />
+                    <input type="submit" value="Find Your Reps" className="Address_search_submit" />
             </form>
         )
         }

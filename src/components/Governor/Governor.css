@@ -2,3 +2,9 @@ img {
     height: 225px;
     width: 178px; 
 }
+
+.Governor {
+    font-family: 'Roboto', sans-serif; 
+    text-align: center;
+    color: #fff;
+}

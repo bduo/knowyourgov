@@ -31,9 +31,14 @@ input::placeholder {
     display: block;
     margin: 0 auto;
     margin-top: 50px;
-    color: #fff;
+    color: #f6f4f3;
     border: none;
     font-family: 'Roboto', sans-serif;
+}
+
+.Address_search_submit:hover {
+    background-color: #2f4858;
+    color: #f6f4f3;
 }
 
 

@@ -2,3 +2,10 @@ img {
     height: 225px;
     width: 178px;
 }
+
+.Senator1, .Senator2 {
+    font-family: 'Roboto', sans-serif; 
+    text-align: center;
+    color: #fff;
+}
+

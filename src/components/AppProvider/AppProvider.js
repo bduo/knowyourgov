@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
-import { withRouter } from 'react-router'
+// import { withRouter } from 'react-router'
 import Promise from 'promise'
+import history from '../../history'
+// import { Redirect } from 'react-router'
 
-
+ 
 export const AppContext = React.createContext()
 
 class AppProvider extends Component {
@@ -22,9 +24,11 @@ class AppProvider extends Component {
      }
 
     componentDidUpdate(prevProps, prevState) {
-        const { history } = this.props;
         if (prevState.state !== this.state) {
-            history.push('/guest')
+            history.push({
+                pathname: '/guest',
+                state: { state: 'state'}
+            });
         }
     }
 
@@ -68,15 +72,6 @@ class AppProvider extends Component {
           
     }
 
-    
-    // redirectSearch = () => {
-    //     const redirectToReferrer = this.state.redirectToGuest
-    //     if(redirectToReferrer === true) {
-    //         <Redirect from='/' to='/guest' />
-    //     }
-    // }
-
-
     render() {
         
         return (
@@ -86,10 +81,9 @@ class AppProvider extends Component {
                         ...this.state
                     },
                     actions: {
-                        handleSearch: this.handleSearch,
+                        handleSearch: this.handleSearch
                     },
-                }}>
-                    
+                }}>   
                 {this.props.children}
             </AppContext.Provider>
         )
@@ -97,4 +91,4 @@ class AppProvider extends Component {
 
 }
 
-export default withRouter(AppProvider)
+export default AppProvider

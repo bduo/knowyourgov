@@ -1,4 +1,56 @@
 img {
     height: 225px;
-    width: 178px; 
+    width: 178px;
+    display: block;
+    margin: 0 auto; 
 }
+
+.Congress1, .Congress2 {
+    font-family: 'Roboto', sans-serif; 
+    text-align: center;
+    color: #fff;
+}
+
+.Rep-phone {
+    padding-top: 7px;
+}
+
+.Rep-phone, .Rep-url {
+    display: block;
+    color: #fff;
+    font-size: 16px;
+    line-height: 25px;
+    font-weight: bold; 
+}
+
+.Rep-name {
+    margin-bottom: 0;
+}
+
+.Rep-title {
+    font-size: 18px;
+    margin-top: 3px;
+}
+
+.Rep-party {
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.Address-container {
+    text-align: center;
+}
+.Rep-address {
+    font-size: 16px;
+    list-style: none; 
+    font-style: normal;
+    line-height: 23px;
+    text-align: left;
+    display: inline-block;
+    width: 165px;
+}
+
+
+
+
+

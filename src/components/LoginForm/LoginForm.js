@@ -1,62 +1,77 @@
 import React, { Component } from 'react'
 import TokenService from '../../services/token-service'
 import { Button, Input } from '../../helpers/Helpers'
+import AuthApiService from '../../services/auth-api-service'
+import AppContext from '../AppProvider/AppProvider'
 import './LoginForm.css'
 
 
 export default class LoginForm extends Component {
-    
+    static contextType = AppContext
+
     static defaultProps = {
         onLoginSuccess: () => {}
     }
     
     state = { error: null }
     
-    handleSubmitBasicAuth = event => {
+    // refreshPage = () => {
+    //     window.location.reload();
+    // }
+
+    handleSubmitJwtAuth = event => {
         event.preventDefault()
+        this.setState({ error: null })
         const { user_name, password } = event.target
         
-        TokenService.saveAuthToken(
-           TokenService.makeBasicAuthToken(user_name.value, password.value)
-        )
-
-        user_name.value = ''
-        password.value = ''
-        this.props.onLoginSuccess()
+        AuthApiService.postLogin({
+            user_name: user_name.value,
+            password: password.value,
+        })
+            .then(res => {
+                user_name.value = ''
+                password.value = ''
+                TokenService.saveAuthToken(res.authToken)
+                this.props.onLoginSuccess()
+                // this.refreshPage()
+            })
+            .catch(res => {
+                this.setState({ error: res.error })
+            })
     }
-    
+
     render() {
         const { error } = this.state
         return (
             <section>
                 <form 
                     className="login-form"
-                    onSubmit={this.handleSubmitBasicAuth}
+                    onSubmit={this.handleSubmitJwtAuth}
                     >
-                    <div role="alert">
-                        {error && <p className="red">{error}</p>}
-                    </div>    
-                    <label className="Username">Username:
+                    <label className="Username">Username</label>
                         <Input
                             type="text" 
                             name="user_name" 
-                            id="LoginForm_user_name"
+                            id="user_name"
                             required>
                         </Input>        
-                    </label>
-                    <label className="Password">Password:
+                    <label className="Password">Password</label>
                         <Input 
                         type="password" 
                         name="password" 
-                        id="LoginForm_password"
+                        id="password"
                         required>
                         </Input>    
-                    </label>
-                    <Button type="submit">
+                    <Button type="submit" >
                         Login
-                    </Button>    
+                    </Button>
+                    <div role="alert">
+                        {error && <p className="red">{error}</p>}
+                    </div>   
                 </form>
             </section>
         )
     }
 }
+
+

@@ -1,5 +1,8 @@
 footer {
     display: flex;
+    margin-top: 60px;
+    margin-bottom: 50px;
+    font-family: 'Roboto', sans-serif;
 }
 
 .column {
@@ -9,9 +12,11 @@ footer {
 .vote-button {
     height: 75px;
     width: 150px;
-    background-color: #f6f4f3;
+    font-weight: bold;
+    background-color: #f25f5c;
     font-family: 'Bungee Shade', cursive;
-    color: #f25f5c;
+    color: #f6f4f3;
+    font-size: 20px;
     border-radius: 10px;
     margin-left: auto;
     margin-right: auto;
@@ -19,7 +24,20 @@ footer {
     border: none;
 }
 
+.vote-button:hover {
+    background-color: #f25f5c;
+    color: #2f4858;
+}
+
+.vote-button:focus {
+    outline: none !important;
+    border:1px solid #f25f5c;
+    box-shadow: 0 0 10px #f25f5c;
+    border-radius: 10px;
+}
+
 .disclaimer {
     text-align: center;
-    color: #fff;
+    color: #f6f4f3;
+    font-size: 14px;
 }

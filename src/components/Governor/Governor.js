@@ -8,17 +8,18 @@ function Governor() {
             {value => (
                 <section className="Governor-section">
                     <div className="Governor">
-                        <h2>{value.state.governor.name}</h2>
+                        <h2 className="Rep-name">{value.state.governor.name}</h2>
+                        <h3 className="Rep-title">(Governor)</h3>
                         <img src={value.state.governor.photoUrl} alt={value.state.governor.name} />
-                        <p>{value.state.governor.party}</p>
-                        <a href={value.state.governor.phones}>{value.state.governor.phones}</a>
-                        <a href={value.state.governor.urls}>{value.state.governor.urls}</a>
-                        <address>
+                        <h4 className="Rep-party">{value.state.governor.party}</h4>
+                        <address className="Rep-address">
                             <li>{value.state.governorAddress.line1}</li>
                             <li>{value.state.governorAddress.line2}</li>
                             <li>{value.state.governorAddress.city}</li>
                             <li>{value.state.governorAddress.state}</li>
                             <li>{value.state.governorAddress.zip}</li>
+                            <a href={value.state.governor.phones} className="Rep-phone">{value.state.governor.phones}</a>
+                            <a href={value.state.governor.urls} className="Rep-url">{value.state.governor.urls}</a>
                         </address>
                     </div>
                 </section> 

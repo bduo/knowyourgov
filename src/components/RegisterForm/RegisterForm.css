@@ -1,6 +1,12 @@
+.Register-form {
+    font-family: 'Roboto', sans-serif; 
+}
+
 .Username, .Password {
     display: block;
     text-align: center;
-    padding-right: 5px;
+    margin-bottom: 5px;
+    font-size: 18px;
+    color: #fff;
 }
 
