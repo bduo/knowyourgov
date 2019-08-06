@@ -1,9 +1,6 @@
 import React, { Component } from 'react'
-// import { withRouter } from 'react-router'
 import Promise from 'promise'
 import history from '../../history'
-// import { Redirect } from 'react-router'
-
  
 export const AppContext = React.createContext()
 
@@ -45,8 +42,9 @@ class AppProvider extends Component {
     }
 
     handleSearch = (address, city, stateCode, parseJSON) => {
-        const urls = [`https://www.googleapis.com/civicinfo/v2/representatives?address=${address} ${city}, ${stateCode}&includeOffices=true&roles=legislatorLowerBody&key=`,
-        `https://www.googleapis.com/civicinfo/v2/representatives?address=${address} ${city}, ${stateCode}&includeOffices=true&roles=legislatorUpperBody&key=`,`https://www.googleapis.com/civicinfo/v2/representatives?address=${address} ${city}, ${stateCode}&includeOffices=true&roles=headOfGovernment&key=`]
+        const API_KEY = process.env.REACT_APP_CIVIC_API_KEY;
+        const urls = [`https://www.googleapis.com/civicinfo/v2/representatives?address=${address} ${city}, ${stateCode}&includeOffices=true&roles=legislatorLowerBody&key=${API_KEY}`,
+        `https://www.googleapis.com/civicinfo/v2/representatives?address=${address} ${city}, ${stateCode}&includeOffices=true&roles=legislatorUpperBody&key=${API_KEY}`,`https://www.googleapis.com/civicinfo/v2/representatives?address=${address} ${city}, ${stateCode}&includeOffices=true&roles=headOfGovernment&key=${API_KEY}`]
         
         Promise.all(urls.map(url =>
             fetch(url)

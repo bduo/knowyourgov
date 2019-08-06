@@ -1,12 +1,7 @@
 footer {
-    display: flex;
     margin-top: 60px;
     margin-bottom: 50px;
     font-family: 'Roboto', sans-serif;
-}
-
-.column {
-    flex: 2;
 }
 
 .vote-button {
@@ -15,7 +10,7 @@ footer {
     font-weight: bold;
     background-color: #f25f5c;
     font-family: 'Bungee Shade', cursive;
-    color: #f6f4f3;
+    color: #fff;
     font-size: 20px;
     border-radius: 10px;
     margin-left: auto;
@@ -37,7 +32,29 @@ footer {
 }
 
 .disclaimer {
+    margin-top: 30px;
     text-align: center;
-    color: #f6f4f3;
+    color: #fff;
     font-size: 14px;
 }
+
+/* Tablet Media Query */
+@media (min-width: 481px) and (max-width: 768px) {
+    footer {
+        display: flex
+    }
+    .column {
+        flex: 2;
+    }
+}
+
+/* Desktop Media Query */
+@media (min-width: 769px) and (max-width: 2000px) {
+    footer {
+        display: flex
+    }
+    .column {
+        flex: 2;
+    }
+}
+    

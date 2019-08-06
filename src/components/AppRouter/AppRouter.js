@@ -14,8 +14,7 @@ import NotFoundPage from '../../pages/NotFoundPage/NotFoundPage'
 
 class AppRouter extends Component {
     state = { 
-      errorPresent: false,
-      isLoggedIn: false 
+      errorPresent: false
     }
     
     static getDerivedStateFromError(error) {
@@ -30,7 +29,7 @@ class AppRouter extends Component {
             <Navigation />
           </header>
           <main className='App_main'>
-            {this.state.errorPresent && <p className='red'>We have an error! Please try again!</p>}
+            {this.state.errorPresent && <p className='Error-message'>We have an error! Please try again!</p>}
             <Switch>
               <Route
                 exact

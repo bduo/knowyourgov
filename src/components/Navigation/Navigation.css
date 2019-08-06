@@ -21,7 +21,7 @@ ul.Navigation-items {
 }
 
 a {
-    color: #2f4858;
+    color: #fff;
     text-decoration: none;
 }
 
@@ -30,15 +30,16 @@ a {
     margin-right: 10px;
 }
 
-.Logo-text {
-    font-size: 25px;
+.logo {
+    height: 100px;
+    width: 100px;
 }
 
 .Navigation_not_logged_in, .Navigation_logged_in {
     font-size: 20px;
 }
 
-.Navigation_not_logged_in a:hover {
+.Navigation_not_logged_in a:hover, .Navigation_not_logged_in a:hover {
     color: #f25f5c;
 }
 
