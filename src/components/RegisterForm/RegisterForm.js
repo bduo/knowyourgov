@@ -13,16 +13,17 @@ export default class RegisterForm extends Component {
     handleSubmit = event => {
         event.preventDefault()
         const { user_name, password } = event.target
+       this.setState({ error: null }) 
        AuthApiService.postUser({
            user_name: user_name.value,
            password: password.value,
        })
-        .then(user => {
+        .then( user => {
             user_name.value = ''
             password.value = ''
             this.props.onRegistrationSuccess()
         })
-        .catch(response => {
+        .catch(response => { 
            this.setState({ error: response.error })
         })
     }
