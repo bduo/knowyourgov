@@ -19,7 +19,7 @@
 }
 
 /* Desktop Media Query */
-@media (min-width: 769px) and (max-width: 2000px) {
+@media (min-width: 769px) and (max-width: 4000px) {
     .Guest-section {
         margin-top: 40px;
         display: flex;

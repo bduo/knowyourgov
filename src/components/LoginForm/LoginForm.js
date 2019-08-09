@@ -15,7 +15,6 @@ export default class LoginForm extends Component {
 
     handleSubmitJwtAuth = event => {
         event.preventDefault()
-        this.setState({ error: null })
         const { user_name, password } = event.target
         
         AuthApiService.postLogin({
@@ -55,7 +54,7 @@ export default class LoginForm extends Component {
                         id='password'
                         required>
                         </Input>    
-                    <Button type='submit' >
+                    <Button type='submit' className='submitButton' >
                         Login
                     </Button>
                     <div role='alert'>

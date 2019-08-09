@@ -2,11 +2,22 @@
     font-family: 'Roboto', sans-serif; 
 }
 
-.Username, .Password {
+.Username, .Password, .street_address,
+.city, .state_code {
     display: block;
     text-align: center;
     margin-bottom: 5px;
     font-size: 18px;
+    color: #fff;
+}
+
+.submitButton {
+    background-color: #f25f5c;
+    color: #fff;
+}
+
+.submitButton:hover {
+    background-color: #2f4858;
     color: #fff;
 }
 
