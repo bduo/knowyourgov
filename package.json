@@ -5,6 +5,7 @@
   "homepage": "https://knowyourgov.brandonelhaj.now.sh/",
   "dependencies": {
     "jwt-decode": "^2.2.0",
+    "lodash": "^4.17.15",
     "promise": "^8.0.3",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
