@@ -1,4 +1,6 @@
 .page-title {
-    font-family: 'Bungee Shade', cursive;
+    font-family: 'Bungee Shade', sans-serif;
     color: #fff;
+    text-align: center;
+    letter-spacing: 2px;
 }

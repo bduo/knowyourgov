@@ -9,6 +9,8 @@ export default class LoginForm extends Component {
 
     static defaultProps = {
         onLoginSuccess: () => {}
+        // on loginSuccess go to civicinfo with Users address information
+        // Routine that gets Rep's information will do the history push
     }
     
     state = { error: null }
@@ -25,6 +27,7 @@ export default class LoginForm extends Component {
             user_name.value = ''
             password.value = ''
             TokenService.saveAuthToken(response.authToken)
+            // get user address town and state from the backend and pass it to the onLoginSuccess method
             this.props.onLoginSuccess()
         })
         .catch(response => {

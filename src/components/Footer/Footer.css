@@ -17,6 +17,7 @@ footer {
     margin-right: auto;
     display: block;
     border: none;
+    letter-spacing: 1px;
 }
 
 .vote-button:hover {
