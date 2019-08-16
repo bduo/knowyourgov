@@ -7,7 +7,10 @@ import noImgSvg from '../../images/user.svg';
 function CongressPersons() {
     return (
         <AppContext.Consumer>
-            {value => (
+            {value => {
+                console.log("This is for the value", value)
+                return (
+                    
                 <section className='CongressPersons-section'>
                     <ErrorBoundary>
                         <div className='Congress1'>
@@ -52,7 +55,7 @@ function CongressPersons() {
                         </div>
                     </ErrorBoundary> 
                 </section>
-            )}
+            )}}
         </AppContext.Consumer>
     )
 }

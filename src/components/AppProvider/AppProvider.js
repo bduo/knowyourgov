@@ -49,26 +49,27 @@ class AppProvider extends Component {
         Promise.all(urls.map(url =>
             fetch(url)
             .then(this.checkStatus)
-            .then(this.parseJSON) 
-            .catch(error => console.log('There was a problem!', error))             
-        ))
+            .then(this.parseJSON)
             .then(data => {
                 console.table(data)
                 this.setState({
                     isSubmitted: true,
                     congress1: data[0].officials[0],
-                    // congress1Address: data[0].officials[0].address[1],
+                    congress1Address: data[0].officials[0].address[1],
                     congress2: data[0].officials[1],
-                    // congress2Address: data[0].officials[1].address[0],
+                    congress2Address: data[0].officials[1].address[0],
                     senator1: data[1].officials[0],
-                    // senator1Address: data[1].officials[0].address[1],
+                    senator1Address: data[1].officials[0].address[1],
                     senator2: data[1].officials[1],
-                    // senator2Address: data[1].officials[1].address[1],
+                    senator2Address: data[1].officials[1].address[1],
                     governor: data[2].officials[1],
-                    // governorAddress: data[2].officials[1].address[0],
+                    governorAddress: data[2].officials[1].address[0],
                 }) 
                 history.push('/guest')
-          })
+            }) 
+            .catch(error => console.log('There was a problem!', error))             
+        ))
+            
           
     }
 
