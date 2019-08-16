@@ -45,35 +45,35 @@ export default class RegisterForm extends Component {
                         name='user_name' 
                         type='text'  
                         required 
-                        id='RegisterForm_user_name'>
+                        className='RegisterForm_user_name'>
                         </Input>    
                     <label className='Password'>Password</label>
                         <Input
                         type='password'
                         name='password' 
                         required 
-                        id='RegisterForm_password'>
+                        className='RegisterForm_password'>
                         </Input>
                     <label className='street_address'>Street Address</label>
                         <Input
                         type='text'
                         name='street_address' 
                         required 
-                        id='RegisterForm_street_address'>
+                        className='RegisterForm_street_address'>
                         </Input>
                     <label className='city'>City</label>
                         <Input
                         type='text'
                         name='city' 
                         required 
-                        id='RegisterForm_city'>
+                        className='RegisterForm_city'>
                         </Input>
                     <label className='state_code'>State</label>
                         <Input
                         type='text'
                         name='state_code' 
                         required 
-                        id='RegisterForm_state_code'>
+                        className='RegisterForm_state_code'>
                         </Input>       
                     <Button type='submit' className='submitButton'>
                         Register

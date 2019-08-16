@@ -11,7 +11,8 @@ const AuthApiService = {
     })
       .then(response => {
         if (!response.ok) {
-          return response.json().then(e => Promise.reject(e))}
+          return response.json().then(e => Promise.reject(e));
+        }
           return response.json()
       })
   },
@@ -25,8 +26,9 @@ const AuthApiService = {
     })
       .then(response => {
         if (!response.ok) {
-          return response.json().then(e => Promise.reject(e))}
-          return response.json();
+          return response.json().then(e => Promise.reject(e));
+        }
+          return response.json()
       })
   }
 }

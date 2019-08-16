@@ -1,42 +1,52 @@
 import React from 'react'
 import './Senators.css'
 import { AppContext } from '../AppProvider/AppProvider';
+import ErrorBoundary from '../ErrorBoundary';
+import noImgSvg from '../../images/user.svg';
 
 function Senators() {
     return (
         <AppContext.Consumer>
             {value => (
                 <section className='Senators-section'>
-                    <div className='Senator1'>
-                        <h2 className='Rep-name'>{value.state.senator1.name}</h2>
-                        <h3 className='Rep-title'>(Senator)</h3>
-                        <img src={value.state.senator1.photoUrl} alt={value.state.senator1.name}/>
-                        <h4 className='Rep-party'>{value.state.senator1.party}</h4>
-                        <address className='Rep-address'>
-                            <li>{value.state.senator1Address.line1}</li>
-                            <li>{value.state.senator1Address.line2}</li>
-                            <li>{value.state.senator1Address.city}</li>
-                            <li>{value.state.senator1Address.state}</li>
-                            <li>{value.state.senator1Address.zip}</li>
-                            <a href={value.state.senator1.phones} className='Rep-phone'>{value.state.senator1.phones}</a>
-                            <a href={value.state.senator1.urls} target='_blank' rel='noopener noreferrer' className='Rep-url'>{value.state.senator1.urls}</a>
-                        </address>
-                    </div>
-                    <div className='Senator2'>
-                        <h2 className='Rep-name'>{value.state.senator2.name}</h2>
-                        <h3 className='Rep-title'>(Senator)</h3>
-                        <img src={value.state.senator2.photoUrl} alt={value.state.senator2.name}/>
-                        <h4 className='Rep-party'>{value.state.senator2.party}</h4>
-                        <address className='Rep-address'>
-                            <li>{value.state.senator2Address.line1}</li>
-                            <li>{value.state.senator2Address.line2}</li>
-                            <li>{value.state.senator2Address.city}</li>
-                            <li>{value.state.senator2Address.state}</li>
-                            <li>{value.state.senator2Address.zip}</li>
-                            <a href={value.state.senator2.phones} className='Rep-phone'>{value.state.senator2.phones}</a>
-                            <a href={value.state.senator2.urls} target='_blank' rel='noopener noreferrer' className='Rep-url'>{value.state.senator2.urls}</a>
-                        </address>
-                    </div>
+                    <ErrorBoundary>
+                        <div className='Senator1'>
+                            <h2 className='Rep-name'>{value.state.senator1.name}</h2>
+                            <h3 className='Rep-title'>(Senator)</h3>
+                            { !value.state.senator1.photoUrl ? <img src={noImgSvg} alt={'Stock avatar for representative'} />
+                               : <img src={value.state.senator1.photoUrl} alt={value.state.senator1.name} />
+                            }
+                            <h4 className='Rep-party'>{value.state.senator1.party}</h4>
+                            <address className='Rep-address'>
+                                <li>{value.state.senator1Address.line1}</li>
+                                <li>{value.state.senator1Address.line2}</li>
+                                <li>{value.state.senator1Address.city}</li>
+                                <li>{value.state.senator1Address.state}</li>
+                                <li>{value.state.senator1Address.zip}</li>
+                                <a href={value.state.senator1.phones} className='Rep-phone'>{value.state.senator1.phones}</a>
+                                <a href={value.state.senator1.urls} target='_blank' rel='noopener noreferrer' className='Rep-url'>{value.state.senator1.urls}</a>
+                            </address>
+                        </div>
+                    </ErrorBoundary>
+                    <ErrorBoundary>
+                        <div className='Senator2'>
+                            <h2 className='Rep-name'>{value.state.senator2.name}</h2>
+                            <h3 className='Rep-title'>(Senator)</h3>
+                            { !value.state.senator2.photoUrl ? <img src={noImgSvg} alt={'Stock avatar for representative'} />
+                               : <img src={value.state.senator2.photoUrl} alt={value.state.senator2.name} />
+                            }
+                            <h4 className='Rep-party'>{value.state.senator2.party}</h4>
+                            <address className='Rep-address'>
+                                <li>{value.state.senator2Address.line1}</li>
+                                <li>{value.state.senator2Address.line2}</li>
+                                <li>{value.state.senator2Address.city}</li>
+                                <li>{value.state.senator2Address.state}</li>
+                                <li>{value.state.senator2Address.zip}</li>
+                                <a href={value.state.senator2.phones} className='Rep-phone'>{value.state.senator2.phones}</a>
+                                <a href={value.state.senator2.urls} target='_blank' rel='noopener noreferrer' className='Rep-url'>{value.state.senator2.urls}</a>
+                            </address>
+                        </div>
+                    </ErrorBoundary>
                 </section>
             )}
         </AppContext.Consumer>

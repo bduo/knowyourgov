@@ -1,5 +1,11 @@
 .Register-form {
     font-family: 'Roboto', sans-serif; 
+    background-color: rgba(255,255,255,.8);
+    width: 450px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 45px 0 50px 0;
+    border-radius: 6px;
 }
 
 .Username, .Password, .street_address,
@@ -8,10 +14,11 @@
     text-align: center;
     margin-bottom: 5px;
     font-size: 18px;
-    color: #fff;
+    color: #2f4858;
 }
 
 .submitButton {
+    margin-top: 30px;
     background-color: #f25f5c;
     color: #fff;
 }
@@ -21,3 +28,9 @@
     color: #fff;
 }
 
+.RegisterForm_user_name, .RegisterForm_password,
+.RegisterForm_street_address, .RegisterForm_city,
+.RegisterForm_state_code {
+    background-color: #247ba0;
+    color: #fff;
+}

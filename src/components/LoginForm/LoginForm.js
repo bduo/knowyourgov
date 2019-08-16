@@ -44,14 +44,14 @@ export default class LoginForm extends Component {
                         <Input
                             type='text' 
                             name='user_name' 
-                            id='user_name'
+                            className='user_name_input'
                             required>
                         </Input>        
                     <label className='Password'>Password</label>
                         <Input 
                         type='password' 
                         name='password' 
-                        id='password'
+                        className='password_input'
                         required>
                         </Input>    
                     <Button type='submit' className='submitButton' >

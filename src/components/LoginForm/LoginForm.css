@@ -1,6 +1,12 @@
 
 .login-form {
     font-family: 'Roboto', sans-serif; 
+    background-color: rgba(255,255,255,.8);
+    width: 450px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 45px 0 50px 0;
+    border-radius: 6px;
 }
 
 .Username, .Password {
@@ -14,18 +20,24 @@
 .Error-message {
     margin-top: 50px;
     text-align: center;
-    color: #fff;
+    color: #2f4858;
     font-weight: bold;
     font-size: 20px;
 }
 
 .submitButton {
+    margin-top: 30px;
     background-color: #f25f5c;
     color: #fff;
 }
 
 .submitButton:hover {
     background-color: #2f4858;
+    color: #fff;
+}
+
+.user_name_input, .password_input {
+    background-color: #247ba0;
     color: #fff;
 }
 

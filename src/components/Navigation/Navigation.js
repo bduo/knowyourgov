@@ -32,7 +32,7 @@ export default class Navigation extends Component {
     renderLogoutLink() {
         return (
             <div className='Navigation_logged_in'>
-                <Link
+                <Link to='/'
                     onClick={this.handleUserLogout}
                     >
                     Logout         
