@@ -2,7 +2,6 @@
 
 Check it out! 
 
-
 ![Know Your Gov App Screenshot](/src/images/knowyourgov_home.png "Know Your Gov")  
 
 **Summary**
@@ -23,7 +22,6 @@ Know Your Gov provides users with their elected representatives information at t
 - Node.js
 - Express
 - PostgreSQL
-
 
 ![Know Your Gov App Reps Screenshot](/src/images/knowyourgov_reps.png "Know Your Gov Reps")
 

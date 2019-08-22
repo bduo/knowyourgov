@@ -21,15 +21,14 @@ export default class LoginPage extends Component {
 
     static contextType = AppContext;
     
-    handleLoginSuccess = (userId, user) => {
+    handleLoginSuccess = (userId) => {
         const { location, history } = this.props
         const destination = (location.state || {}).from || '/dashboard/:user_id'
         history.push(destination)
         
         // window.location.reload()
         UserApiService.getUser(userId)
-        console.log(user, userId)
-        localStorage.setItem('user', JSON.stringify(user))
+        .then(user => {localStorage.setItem('user', JSON.stringify(user))})
         // let addRes = Object.assign({}, ...Object.keys(user).map(res => ({street_address: user.street_address, city: user.city, state_code: user.state_code})))
         // console.log(addRes)
     
