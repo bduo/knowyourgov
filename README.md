@@ -23,8 +23,6 @@ Know Your Gov provides users with their elected representatives information at t
 - Express
 - PostgreSQL
 
-![Know Your Gov App Reps Screenshot](/src/images/knowyourgov_reps.png "Know Your Gov Reps")
-
 **API Documentation** 
 
 Starting Know Your Gov:
@@ -73,7 +71,7 @@ Get user profile from database:
 
 - 404 Not Found - Resource was not found
 
-
+![Know Your Gov App Reps Screenshot](/src/images/knowyourgov_reps.png "Know Your Gov Reps")
 
 
 
