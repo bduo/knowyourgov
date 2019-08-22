@@ -1,6 +1,6 @@
 # Know Your Gov
 
-##Check it out! 
+## Check it out! 
 
 ![Know Your Gov App Screenshot](/src/images/knowyourgov_home.png "Know Your Gov")  
 
