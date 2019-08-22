@@ -2,7 +2,7 @@
 
 Check it out! 
 
-**Landing Page**
+
 ![Know Your Gov App Screenshot](/src/images/knowyourgov_home.png "Know Your Gov")  
 
 **Summary**
@@ -24,7 +24,7 @@ Know Your Gov provides users with their elected representatives information at t
 - Express
 - PostgreSQL
 
-**Reps Page**
+
 ![Know Your Gov App Reps Screenshot](/src/images/knowyourgov_reps.png "Know Your Gov Reps")
 
 **API Documentation** 
@@ -57,7 +57,7 @@ Get user profile from database:
 
 **Allowed HTTPs Requests**
 
-- POST: Add user to database or login to app
+- POST: Add a user to the database or login to the app
 
 - GET: Retrieve a user from the database 
 
