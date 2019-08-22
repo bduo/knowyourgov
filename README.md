@@ -25,53 +25,53 @@ Stack Used:
 - Express
 - PostgreSQL
 
-- API Documentation -
+API Documentation 
 
 Starting Know Your Gov:
 
-npm start
+- npm start
 
 Testing Know Your Gov:
 
-npm test
+- npm test
 
-- Know Your Gov API -
+Know Your Gov API
 
 Login Authentication:
 
-/authorization/login
+- /authorization/login
 
 Post user to database:
 
-/users
+- /users
 
 Get user profile from database:
 
-/users/${userId}
+- /users/${userId}
 
-- Google Civic Info API -
+Google Civic Info API 
 
 API Documentation - https://developers.google.com/civic-information/docs/v2/
 
-- Allowed HTTPs Requests -
+Allowed HTTPs Requests
 
-POST: Add user to database or login to app
+- POST: Add user to database or login to app
 
-GET: Retrieve a user from the database 
+- GET: Retrieve a user from the database 
 
-- Normal HTTP Responses - 
+Normal HTTP Responses 
 
-200 OK - Successful login response or successful get user request
+- 200 OK - Successful login response or successful get user request
 
-201 Created - The request was successful and the user is created
+- 201 Created - The request was successful and the user is created
 
-204 No Content - The request was successful, but no content was returned
+- 204 No Content - The request was successful, but no content was returned
 
-400 Bad Request - The request was not understood or missing required parameters
+- 400 Bad Request - The request was not understood or missing required parameters
 
-401 Unauthorized - Authentication failed or user did not have correct login permissions
+- 401 Unauthorized - Authentication failed or user did not have correct login permissions
 
-404 Not Found - Resource was not found
+- 404 Not Found - Resource was not found
 
 
 
