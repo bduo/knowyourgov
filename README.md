@@ -2,9 +2,9 @@
 
 Check it out! 
 
-![Know Your Gov App Screenshot](../../images/knowyourgov_home.png "Know Your Gov") 
+![Know Your Gov App Screenshot](/src/images/knowyourgov_home.png "Know Your Gov") 
 
-![Know Your Gov App Reps Screenshot](../../images/knowyourgov_reps.png "Know Your Gov Reps") 
+![Know Your Gov App Reps Screenshot](/src/images/knowyourgov_reps.png "Know Your Gov Reps") 
 
 Summary
 
