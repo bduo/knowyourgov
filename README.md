@@ -2,9 +2,9 @@
 
 Check it out! 
 
-![Know Your Gov App Screenshot](knowyourgov_home.png "Know Your Gov") 
+![Know Your Gov App Screenshot](../../images/knowyourgov_home.png "Know Your Gov") 
 
-![Know Your Gov App Reps Screenshot](knowyourgov_reps.png "Know Your Gov Reps") 
+![Know Your Gov App Reps Screenshot](../../images/knowyourgov_reps.png "Know Your Gov Reps") 
 
 Summary
 
@@ -25,41 +25,41 @@ Stack Used:
 - Express
 - PostgreSQL
 
-API Documentation 
+- API Documentation -
 
-Starting Know Your Gov
+Starting Know Your Gov:
 
 npm start
 
-Testing Know Your Gov 
+Testing Know Your Gov:
 
 npm test
 
-API Endpoint: Know Your Gov
+- Know Your Gov API -
 
-Login Authentication
+Login Authentication:
 
 /authorization/login
 
-Post user to database
+Post user to database:
 
 /users
 
-Get user profile from database
+Get user profile from database:
 
 /users/${userId}
 
-API Endpoints: Google Civic Info
+- Google Civic Info API -
 
 API Documentation - https://developers.google.com/civic-information/docs/v2/
 
-Allowed HTTPs Requests
+- Allowed HTTPs Requests -
 
 POST: Add user to database or login to app
 
 GET: Retrieve a user from the database 
 
-Normal HTTP Responses 
+- Normal HTTP Responses - 
 
 200 OK - Successful login response or successful get user request
 
