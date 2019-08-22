@@ -1,32 +1,39 @@
 import React, { Component } from 'react'
 import './SearchBox.css'
+import { AppContext } from '../AppProvider/AppProvider';
+import history from '../../history'
 
 class SearchBox extends Component {
+    
     state = {
         address: '',
         city: '',
         stateCode: '',
     }
 
+    static contextType = AppContext;
+
     handleChange = (event) => {
         const{ name, value } = event.target
         this.setState({
             [name]: value
         })
-        console.log(name, value)
     }
  
     handleSubmit = (event) => {
         event.preventDefault()
-        console.log('submitted')
-        this.props.handleSearch(this.state.address, this.state.city, this.state.stateCode)
-        this.setState({address: ''})
-        this.setState({city: ''})
-        this.setState({stateCode: ''})
+        this.context.actions.handleSearch(
+            this.state.address, 
+            this.state.city, 
+            this.state.stateCode
+        )
+            this.setState({address: ''})
+            this.setState({city: ''})
+            this.setState({stateCode: ''})
+            history.push('/guest')
     }
     
     render() {
-       console.log(this.props)
         return (
             <form id="Address_search_form" onSubmit={this.handleSubmit}>
                     <input 

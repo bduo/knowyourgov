@@ -47,7 +47,7 @@ export default class Navigation extends Component {
                 <nav className='Navigation'>
                     <div><Link to='/'><img src={logo} className='logo' alt="KnowYourGov logo"></img></Link></div>
                     <ul className='Navigation-items'>
-                        {TokenService.hasAuthToken() ? this.renderLogoutLink() : this.renderLoginLink()}
+                        { TokenService.hasAuthToken() ? this.renderLogoutLink() : this.renderLoginLink() }
                     </ul>
                 </nav>
             </>

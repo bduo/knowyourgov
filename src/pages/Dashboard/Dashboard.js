@@ -5,9 +5,57 @@ import Governor from '../../components/Governor/Governor'
 import { AppContext } from '../../components/AppProvider/AppProvider'
 import Footer from '../../components/Footer/Footer'
 import './Dashboard.css'
+// import UserApiService from '../../services/user-api-service';
 
 export default class Dashboard extends Component {
-    state = {}
+
+    // state = {
+    //     repLower: {},
+    //     repHigher: {},
+    //     governor: {},
+    //  } 
+
+    // data = null;
+
+    // constructor() {
+    //     super ()
+    //     const user = JSON.parse(localStorage.getItem('user'));
+    //     if (user) {
+    //         UserApiService.getReps(user.street_address, user.city, user.state_code)
+    //             .then((res) => {
+    //                 const reps = [];
+    //                 res.forEach((data, idx) => {
+    //                     data.then((rep) => {
+    //                         if (idx === 0) {
+    //                             this.setState({
+    //                                 repLower: rep
+    //                             })
+    //                         }
+    //                         if (idx === 1) {
+    //                             this.setState({
+    //                                 repHigher: rep
+    //                             })
+    //                         }
+    //                         if (idx === 2) {
+    //                             this.setState({
+    //                                 governor: rep
+    //                             })
+    //                             this.data = this.parseData(this.state);
+    //                         }
+    //                     })
+    //                 })
+    //             })
+    //     }
+    // }
+
+    // parseData(data) {
+    //     let parsedData = {congress1: [],
+    //     congress2: [],
+    //     senator1: [],
+    //     senator2: [],
+    //     governor: [],}
+    //     return parsedData
+    // }
 
     render() {
         return (

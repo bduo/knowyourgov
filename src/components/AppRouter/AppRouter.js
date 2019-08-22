@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import { Route, Switch } from 'react-router-dom'
 import Navigation from '../Navigation/Navigation'
-import LandingPage from '../../pages/LandingPage/LandingPage'
+import HomePage from '../../pages/HomePage/HomePage'
 import LoginPage from '../../pages/LoginPage/LoginPage'
 import RegisterPage from '../../pages/RegisterPage/RegisterPage'
 import GuestPage from '../../pages/GuestPage/GuestPage'
@@ -25,16 +25,16 @@ class AppRouter extends Component {
   render() {
     return (
       <div className='AppRouter'>
-          <header className='App_navigation'>
-            <Navigation />
-          </header>
+        <header className='App_navigation'>
+          <Navigation />
+        </header> 
           <main className='App_main'>
             {this.state.errorPresent && <p className='Error-message'>We have an error! Please try again!</p>}
             <Switch>
-              <Route
+              <PublicRoute
                 exact
                 path={'/'}
-                component={LandingPage}
+                component={HomePage}
               />
               <PublicRoute
                 path={'/login'}
@@ -46,6 +46,10 @@ class AppRouter extends Component {
               />
               <PrivateRoute
                 path={'/dashboard'} 
+                component={Dashboard}
+              />
+              <PrivateRoute
+                path={'/dashboard/:user_id'} 
                 component={Dashboard}
               />
               {/* <PrivateRoute

@@ -1,7 +1,3 @@
-img {
-    height: 225px;
-    width: 178px;
-}
 
 .Senator1, .Senator2 {
     font-family: 'Roboto', sans-serif; 
@@ -9,7 +5,5 @@ img {
     color: #fff;
 }
 
-.Senator2 {
-    margin-top: 60px
-}
+
 

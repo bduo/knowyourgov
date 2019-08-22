@@ -1,4 +1,4 @@
-img {
+.Rep-photo {
     height: 225px;
     width: 178px;
     display: block;
@@ -9,10 +9,6 @@ img {
     font-family: 'Roboto', sans-serif; 
     text-align: center;
     color: #fff;
-}
-
-.Rep-phone {
-    padding-top: 7px;
 }
 
 .Rep-phone, .Rep-url {
@@ -34,7 +30,7 @@ img {
 
 .Rep-party {
     margin-top: 15px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .Address-container {
@@ -50,14 +46,12 @@ img {
     width: 165px;
 }
 
-.Congress2 {
-    margin-top: 45px;
+.Website-link-style:hover, .Rep-email-desktop:hover {
+    color: #f25f5c;
 }
 
-.Rep-email {
-    font-weight: bold;
-    margin-top: 0;
-}
+
+
 
 
 

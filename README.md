@@ -1,68 +1,79 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Know Your Gov
 
-## Available Scripts
+Check it out! 
 
-In the project directory, you can run:
+![Know Your Gov App Screenshot](knowyourgov_home.png "Know Your Gov") 
 
-### `npm start`
+![Know Your Gov App Reps Screenshot](knowyourgov_reps.png "Know Your Gov Reps") 
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Summary
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+Know Your Gov provides users with their elected representatives information at the state and federal level. The application retrieves their representatives data through their physical address. The user can choose to do a one time search or register their address with the app to load their representatives information. The content is provided by Google's Civic Info Api and gives the user a way to contact their elected representative by phone, website, and email. Know Your Gov is an excellent a way of finding out who represents you and to hold them accountable!
 
-### `npm test`
+Features: 
+- Find out your representatives information at the state and federal levels
+- Register for an account to save your representatives information for reference
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+APIs Used:
+- Google Civic Info API
+- knowyourgov (backend API)
 
-### `npm run build`
+Stack Used: 
+- React.js
+- CSS
+- Node.js
+- Express
+- PostgreSQL
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+API Documentation 
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+Starting Know Your Gov
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+npm start
 
-### `npm run eject`
+Testing Know Your Gov 
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+npm test
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+API Endpoint: Know Your Gov
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Login Authentication
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+/authorization/login
 
-## Learn More
+Post user to database
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+/users
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Get user profile from database
 
-### Code Splitting
+/users/${userId}
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+API Endpoints: Google Civic Info
 
-### Analyzing the Bundle Size
+API Documentation - https://developers.google.com/civic-information/docs/v2/
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+Allowed HTTPs Requests
 
-### Making a Progressive Web App
+POST: Add user to database or login to app
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+GET: Retrieve a user from the database 
 
-### Advanced Configuration
+Normal HTTP Responses 
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+200 OK - Successful login response or successful get user request
 
-### Deployment
+201 Created - The request was successful and the user is created
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+204 No Content - The request was successful, but no content was returned
 
-### `npm run build` fails to minify
+400 Bad Request - The request was not understood or missing required parameters
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+401 Unauthorized - Authentication failed or user did not have correct login permissions
+
+404 Not Found - Resource was not found
+
+
+
+
+

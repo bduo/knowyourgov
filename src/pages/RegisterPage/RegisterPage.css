@@ -4,3 +4,12 @@
     text-align: center;
     letter-spacing: 2px;
 }
+
+/* Mobile Media Query */
+@media (max-width: 481px) {
+    .Register-form, .login-form {
+        width: auto;
+        border-radius: 0;
+    }
+
+}    

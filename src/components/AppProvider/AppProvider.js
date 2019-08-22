@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import Promise from 'promise'
-import history from '../../history'
  
 export const AppContext = React.createContext()
 
@@ -28,7 +27,7 @@ class AppProvider extends Component {
     //         });
     //     }
     // }
-
+ 
     checkStatus = (response) => {
         if (response.ok) {
           return Promise.resolve(response);
@@ -41,36 +40,46 @@ class AppProvider extends Component {
         return response.json();
     }
     
-    handleSearch = (address, city, stateCode) => {
+    handleSearch = (address, city, stateCode)  => {
         const API_KEY = process.env.REACT_APP_CIVIC_API_KEY;
-        const urls = [`https://www.googleapis.com/civicinfo/v2/representatives?address=${address} ${city}, ${stateCode}&includeOffices=true&roles=legislatorLowerBody&key=${API_KEY}`,
-        `https://www.googleapis.com/civicinfo/v2/representatives?address=${address} ${city}, ${stateCode}&includeOffices=true&roles=legislatorUpperBody&key=${API_KEY}`,`https://www.googleapis.com/civicinfo/v2/representatives?address=${address} ${city}, ${stateCode}&includeOffices=true&roles=headOfGovernment&key=${API_KEY}`]
-        console.log(urls)
-        Promise.all(urls.map(url =>
-            fetch(url)
-            .then(this.checkStatus)
-            .then(this.parseJSON)
-            .then(data => {
-                console.table(data)
-                this.setState({
-                    isSubmitted: true,
-                    congress1: data[0].officials[0],
-                    congress1Address: data[0].officials[0].address[1],
-                    congress2: data[0].officials[1],
-                    congress2Address: data[0].officials[1].address[0],
-                    senator1: data[1].officials[0],
-                    senator1Address: data[1].officials[0].address[1],
-                    senator2: data[1].officials[1],
-                    senator2Address: data[1].officials[1].address[1],
-                    governor: data[2].officials[1],
-                    governorAddress: data[2].officials[1].address[0],
-                }) 
-                history.push('/guest')
-            }) 
-            .catch(error => console.log('There was a problem!', error))             
-        ))
-            
-          
+        const url1 = `https://www.googleapis.com/civicinfo/v2/representatives?address=${address} ${city}, ${stateCode}&includeOffices=true&roles=legislatorLowerBody&key=${API_KEY}`;
+            fetch(url1)
+                .then(this.checkStatus)
+                .then(this.parseJSON) 
+                .then(this.validateAddressFields)
+                .then(data => {
+                    this.setState({
+                        isSubmitted: true,
+                        congress1: data.officials[0],
+                        congress2: data.officials[1],
+                    })
+                })
+                .catch(error => console.log('There was a problem!', error))
+        
+        const url2 = `https://www.googleapis.com/civicinfo/v2/representatives?address=${address} ${city}, ${stateCode}&includeOffices=true&roles=legislatorUpperBody&key=${API_KEY}`;
+            fetch(url2)
+                .then(this.checkStatus)
+                .then(this.parseJSON) 
+                .then(data => {
+                    this.setState({
+                        isSubmitted: true,
+                        senator1: data.officials[0],
+                        senator2: data.officials[1],
+                    })
+                })
+                .catch(error => console.log('There was a problem!', error))
+    
+        const url3 = `https://www.googleapis.com/civicinfo/v2/representatives?address=${address} ${city}, ${stateCode}&includeOffices=true&roles=headOfGovernment&key=${API_KEY}`;
+            fetch(url3)
+                .then(this.checkStatus)
+                .then(this.parseJSON) 
+                .then(data => {
+                    this.setState({
+                        isSubmitted: true,
+                        governor: data.officials[1],
+                    })
+                })
+                .catch(error => console.log('There was a problem!', error))
     }
 
     render() {
@@ -89,7 +98,6 @@ class AppProvider extends Component {
             </AppContext.Provider>
         )
     }
-
 }
 
 export default AppProvider

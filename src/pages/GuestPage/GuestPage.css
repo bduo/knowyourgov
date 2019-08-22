@@ -1,4 +1,4 @@
-
+/* Mobile Media Query */
 
 .Guest-section {
     margin-top: 40px;
@@ -13,13 +13,108 @@
     font-size: 40px;
 }
 
+.Rep-phone {
+    display: none;
+}
+
+.Rep-email-desktop {
+    display: none;
+}
+
+.Rep-phone-button {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 15px;
+    margin-bottom: 20px;
+} 
+
+.Rep-email-button {
+    margin-top: 14px;
+}
+
+.Congress2, .Senator1, 
+.Senator2, .Governor {
+    margin-top: 37px;
+}
+
+.Phone-icon, .Website-icon,
+.Website-link-style, .Email-icon {
+    display: none;
+}
+
+
 /* Tablet Media Query */
 @media (min-width: 481px) and (max-width: 768px) {
-   
+    .Rep-phone {
+        display: block;
+    }
+    
+    .Rep-phone {
+        display: none;
+    }
+
+    .Rep-phone-button {
+        margin-top: 20px;
+    }
+
+    .Congress2, .Senator1, 
+    .Senator2, .Governor {
+        margin-top: 40px;
+    } 
+
+    .Rep-party {
+        margin-bottom: 14px;
+    }
+
+    .Rep-phone-button, .Rep-url-button, .Rep-email-button {
+        display: none;
+    } 
+
+    .Phone-link-desktop, .Website-link-desktop, .Email-link-desktop {
+        display: flex;
+        align-items: center;
+    }
+
+    .Phone-link-desktop, .Website-link-desktop {
+        margin-bottom: 10px;
+    }
+
+    .Phone-icon, .Website-icon, .Email-icon {
+        display: block;
+        height: 30px;
+        width: 30px;
+    }
+
+    .Website-link-style, .Rep-email-desktop, .Rep-phone {
+        display: block;
+        font-weight: bold;
+        text-decoration: underline;
+        font-size: 17px;
+        padding-left: 6.5px;
+    }
+
+    .Website-link-style:visited, .Rep-email-desktop:visited, .Rep-phone:visited {
+        color: #fff;
+    }
+
+    .Rep-phone {
+        text-decoration: none;
+    }
+
+    Footer {
+        margin-top: 80px;
+    }
+
 }
 
 /* Desktop Media Query */
 @media (min-width: 769px) and (max-width: 4000px) {
+
+    Footer {
+        margin-top: 90px;
+    }
+
     .Guest-section {
         margin-top: 40px;
         display: flex;
@@ -28,6 +123,50 @@
     .Guest-column-2 {
         flex: 3;   
     }
+    
+    .Rep-phone-button, .Rep-url-button, .Rep-email-button {
+        display: none;
+    } 
+
+    .Congress2, .Senator2 {
+        margin-top: 45px;
+    }
+
+    .Senator1, .Governor {
+        margin-top: 0;
+    } 
+
+    .Phone-link-desktop, .Website-link-desktop, .Email-link-desktop {
+        display: flex;
+        align-items: center;
+    }
+
+    .Phone-link-desktop, .Website-link-desktop {
+        margin-bottom: 10px;
+    }
+
+    .Phone-icon, .Website-icon, .Email-icon {
+        display: block;
+        height: 30px;
+        width: 30px;
+    }
+
+    .Website-link-style, .Rep-email-desktop, .Rep-phone {
+        display: block;
+        font-weight: bold;
+        text-decoration: underline;
+        font-size: 17px;
+        padding-left: 6.5px;
+    }
+
+    .Rep-phone {
+        text-decoration: none;
+    }
+
+    .Rep-party {
+        margin-bottom: 14px;
+    }
+
 }
 
 
