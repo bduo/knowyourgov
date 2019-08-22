@@ -13,11 +13,37 @@ export default class LoginPage extends Component {
         },
     }
 
-    // state = {
-    //     address: '',
-    //     city: '',
-    //     stateCode: '',
-    // }
+    state = {
+        address: '',
+        city: '',
+        stateCode: '',
+    }
+
+    componentDidMount() {
+        const getUserObj = localStorage.getItem('street_address, city, state_code') === 'true';
+        const user = getUserObj ? localStorage.getItem('user'): '';
+        this.setState({ 
+            address: user.street_address, 
+            city: user.city,
+            state_code: user.state_code,
+        })
+    }
+
+    // componentWillMount() {
+    //     localStorage = JSON.parse(localStorage.getItem('user'));
+    //     if (localStorage === null) {
+    //       this.setState({  
+            
+    //       });
+    //       localStorage.setItem('user',JSON.stringify( this.state.user));
+    //     }
+    //     else {
+    //       console.log("localStorage");
+    //       this.setState({
+    //         user: localStorage
+    //       });
+    //     }
+    //   }
 
     static contextType = AppContext;
     
@@ -28,7 +54,18 @@ export default class LoginPage extends Component {
         
         window.location.reload()
         UserApiService.getUser(userId)
-        .then(user => {localStorage.setItem('user', JSON.stringify(user))})
+        .then(user => {JSON.parse(localStorage.setItem('user', JSON.stringify(user)))})
+        .then(this.componentDidMount)
+        this.context.actions.handleSearch(
+            this.state.address, 
+            this.state.city, 
+            this.state.stateCode
+        )
+            this.setState({address: ''})
+            this.setState({city: ''})
+            this.setState({stateCode: ''})
+            history.push('/dashboard/:user_id')
+        
         // let addRes = Object.assign({}, ...Object.keys(user).map(res => ({street_address: user.street_address, city: user.city, state_code: user.state_code})))
         // console.log(addRes)
     

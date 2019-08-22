@@ -25,11 +25,11 @@ Know Your Gov provides users with their elected representatives information at t
 
 # API Documentation
 
-### Starting Know Your Gov:
+**Starting Know Your Gov**
 
 - `npm start`
 
-### Testing Know Your Gov:
+**Testing Know Your Gov**
 
 - `npm test`
 

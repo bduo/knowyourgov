@@ -7,10 +7,9 @@ import history from './history'
 import './index.css';
 
 ReactDOM.render(
-    
     <Router history={history}>
         <AppProvider>
-            <AppRouter /> 
+            <AppRouter />
         </AppProvider>
     </Router>,
     document.getElementById('root')
