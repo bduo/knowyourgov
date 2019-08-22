@@ -35,15 +35,15 @@ Know Your Gov provides users with their elected representatives information at t
 
 ## Know Your Gov API
 
-### Login Authentication
+**Login Authentication**
 
 - `/authorization/login`
 
-### Post user to database
+**Post user to database**
 
 - `/users`
 
-### Get user profile from database
+**Get user profile from database**
 
 - `/users/${userId}`
 
