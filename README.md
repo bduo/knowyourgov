@@ -2,6 +2,7 @@
 
 Check it out! 
 
+**Landing Page**
 ![Know Your Gov App Screenshot](/src/images/knowyourgov_home.png "Know Your Gov")  
 
 **Summary**
@@ -23,9 +24,10 @@ Know Your Gov provides users with their elected representatives information at t
 - Express
 - PostgreSQL
 
+**Reps Page**
 ![Know Your Gov App Reps Screenshot](/src/images/knowyourgov_reps.png "Know Your Gov Reps")
 
-**API DOCUMENTATION** 
+**API Documentation** 
 
 Starting Know Your Gov:
 
