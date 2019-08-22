@@ -1,6 +1,6 @@
 # Know Your Gov
 
-Check it out! 
+##Check it out! 
 
 ![Know Your Gov App Screenshot](/src/images/knowyourgov_home.png "Know Your Gov")  
 
@@ -33,7 +33,7 @@ Know Your Gov provides users with their elected representatives information at t
 
 - `npm test`
 
-**Know Your Gov API**
+## Know Your Gov API
 
 ### Login Authentication
 
@@ -43,7 +43,7 @@ Know Your Gov provides users with their elected representatives information at t
 
 - `/users`
 
-Get user profile from database:
+### Get user profile from database
 
 - `/users/${userId}`
 
