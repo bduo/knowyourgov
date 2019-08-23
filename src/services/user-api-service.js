@@ -24,8 +24,6 @@ const UserApiService = {
             .then(res => {
                 return [res[0].json(), res[1].json(), res[2].json()]
             })
-            
-          
     }
     
 }

@@ -29,21 +29,7 @@ export default class LoginPage extends Component {
         })
     }
 
-    // componentWillMount() {
-    //     localStorage = JSON.parse(localStorage.getItem('user'));
-    //     if (localStorage === null) {
-    //       this.setState({  
-            
-    //       });
-    //       localStorage.setItem('user',JSON.stringify( this.state.user));
-    //     }
-    //     else {
-    //       console.log("localStorage");
-    //       this.setState({
-    //         user: localStorage
-    //       });
-    //     }
-    //   }
+   
 
     static contextType = AppContext;
     
@@ -65,9 +51,6 @@ export default class LoginPage extends Component {
             this.setState({city: ''})
             this.setState({stateCode: ''})
             history.push('/dashboard/:user_id')
-        
-        // let addRes = Object.assign({}, ...Object.keys(user).map(res => ({street_address: user.street_address, city: user.city, state_code: user.state_code})))
-        // console.log(addRes)
     }
         
         // on loginSuccess go to civicinfo with Users address information

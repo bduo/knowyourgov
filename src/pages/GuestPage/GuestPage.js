@@ -10,23 +10,23 @@ function GuestPage() {
     return (
         <AppContext.Consumer>
             {value => (
-            <>    
-                <div>
-                    <h1 className="Guest-title">YOUR REPS</h1>    
-                    <section className="Guest-section">
-                        <div className="Guest-column-2">
-                            {value.state.isSubmitted && <CongressPersons /> }
-                        </div>
-                        <div className="Guest-column-2">
-                            {value.state.isSubmitted && <Senators /> }
-                        </div>
-                        <div className="Guest-column-2">
-                            {value.state.isSubmitted && <Governor /> }
-                        </div>
-                    </section> 
-                </div>
-                <Footer />
-            </>
+                <>    
+                    <div>
+                        <h1 className="Guest-title">YOUR REPS</h1>    
+                        <section className="Guest-section">
+                            <div className="Guest-column-2">
+                                {value.state.isSubmitted && <CongressPersons /> }
+                            </div>
+                            <div className="Guest-column-2">
+                                {value.state.isSubmitted && <Senators /> }
+                            </div>
+                            <div className="Guest-column-2">
+                                {value.state.isSubmitted && <Governor /> }
+                            </div>
+                        </section> 
+                    </div>
+                    <Footer />
+                </>
             )}
             
         </AppContext.Consumer>

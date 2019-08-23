@@ -3,32 +3,14 @@ import SearchBox from '../../components/SearchBox/SearchBox'
 import './HomePage.css'
 import Footer from '../../components/Footer/Footer'
 import { AppContext } from '../../components/AppProvider/AppProvider'
-// import Popup from 'reactjs-popup'
 
 class HomePage extends Component {
-
-    // state = {
-    //     viewPopup: false,
-    // }
-
-    // componentDidMount() {
-    //     let visited = localStorage["alreadyVisited"];
-    //     if(visited) {
-    //          this.setState({ viewPopup: false })
-    //     } else {
-    //          localStorage["alreadyVisited"] = true;
-    //          this.setState({ viewPopup: true});
-    //     }
-    // }
 
     render() {
         return (
             <AppContext.Consumer>
                 {value => (         
                     <div>
-                        {/* <Popup trigger={this.componentDidMount} position='right center'>
-                            <div>Hey Bitch</div>
-                        </Popup> */}
                         <section className="Welcome_message">
                             <h1 className="Welcome-text">KNOW</h1>
                             <h1 className="Welcome-text">YOUR</h1>

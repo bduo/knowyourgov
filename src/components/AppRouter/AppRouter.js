@@ -45,10 +45,6 @@ class AppRouter extends Component {
                 component={RegisterPage}
               />
               <PrivateRoute
-                path={'/dashboard'} 
-                component={Dashboard}
-              />
-              <PrivateRoute
                 path={'/dashboard/:user_id'} 
                 component={Dashboard}
               />
