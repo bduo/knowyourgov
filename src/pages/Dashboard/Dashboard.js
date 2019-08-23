@@ -3,7 +3,7 @@ import CongressPersons from '../../components/CongressPersons/CongressPersons'
 import Senators from '../../components/Senators/Senators'
 import Governor from '../../components/Governor/Governor'
 import { AppContext } from '../../components/AppProvider/AppProvider'
-import Footer from '../../components/Footer/Footer'
+import FooterLoggedIn from '../../components/Footer/FooterLoggedIn'
 import './Dashboard.css'
 // import UserApiService from '../../services/user-api-service';
 
@@ -76,7 +76,7 @@ export default class Dashboard extends Component {
                             </div>
                         </section> 
                     </div>
-                    <Footer />
+                    <FooterLoggedIn/>
                 </>
                 )}
             </AppContext.Consumer>

@@ -11,10 +11,8 @@
     "promise": "^8.0.3",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-modal": "^3.10.1",
     "react-router-dom": "^5.0.1",
-    "react-scripts": "3.0.1",
-    "reactjs-popup": "^1.4.2"
+    "react-scripts": "3.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -38,5 +36,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0"
   }
 }

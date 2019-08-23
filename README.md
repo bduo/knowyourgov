@@ -37,15 +37,15 @@ Know Your Gov provides users with their elected representatives information at t
 
 **Login Authentication**
 
-- `/authorization/login`
+- `POST /authorization/login`
 
 **Post user to database**
 
-- `/users`
+- `POST /users`
 
 **Get user profile from database**
 
-- `/users/${userId}`
+- `GET /users/${userId}`
 
 ## Google Civic Info API
 

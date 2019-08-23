@@ -68,16 +68,7 @@ export default class LoginPage extends Component {
         
         // let addRes = Object.assign({}, ...Object.keys(user).map(res => ({street_address: user.street_address, city: user.city, state_code: user.state_code})))
         // console.log(addRes)
-    
     }
-        
-        // .then(
-        //     this.context.actions.handleSearch()
-        //     history.push('/guest')
-            
-        // )
-
-   
         
         // on loginSuccess go to civicinfo with Users address information
         // Routine that gets Rep's information currently does the history push

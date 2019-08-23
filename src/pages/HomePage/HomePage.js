@@ -40,7 +40,7 @@ class HomePage extends Component {
                         </section>
                         <section className="LandingPage_info">
                             <p className="App-info-text">
-                                KnowYourGov is a way to stay informed about your government<br></br>and to learn who represents you in congress.
+                                KnowYourGov is a way to stay informed about your government<br></br>and to learn who represents you in congress and at the state level.
                             </p> 
                         </section>
                         <Footer />
