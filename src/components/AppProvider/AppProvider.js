@@ -55,7 +55,7 @@ class AppProvider extends Component {
                         congress2: data.officials[1],
                     })
                 })
-                .catch(resError => { this.setState({error: resError.error}) })
+                .catch(error => console.log('There was a problem!', error))
         
         const url2 = `https://www.googleapis.com/civicinfo/v2/representatives?address=${address} ${city}, ${stateCode}&includeOffices=true&roles=legislatorUpperBody&key=${API_KEY}`;
             fetch(url2)
@@ -68,7 +68,7 @@ class AppProvider extends Component {
                         senator2: data.officials[1],
                     })
                 })
-                .catch(resError => { this.setState({error: resError.error}) })
+                .catch(error => console.log('There was a problem!', error))
     
         const url3 = `https://www.googleapis.com/civicinfo/v2/representatives?address=${address} ${city}, ${stateCode}&includeOffices=true&roles=headOfGovernment&key=${API_KEY}`;
             fetch(url3)
@@ -80,7 +80,7 @@ class AppProvider extends Component {
                         governor: data.officials[1],
                     })
                 })
-                .catch(resError => { this.setState({error: resError.error}) })
+                .catch(error => console.log('There was a problem!', error))
     }
 
     render() {
