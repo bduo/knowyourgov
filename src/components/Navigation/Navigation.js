@@ -4,26 +4,17 @@ import'./Navigation.css'
 import history from '../../history'
 import TokenService from '../../services/token-service'
 import logo from '../../images/logo.svg'
+import { AppContext } from '../../components/AppProvider/AppProvider';
 
 export default class Navigation extends Component {
-  
-    // state = {
-    //     isLoggedIn: false
-    // }
-
-    // componentWillMount() {
-    //     if (!!) {
-    //         this.setState({
-    //             isLoggedIn: true
-    //         })
-    //     }
-    // }
 
     handleUserLogout = () => {
         TokenService.clearAuthToken()
         history.push('/')
         window.location.reload()
     }
+
+    static contextType = AppContext;
 
     renderLoginLink = () => {
         return (
@@ -52,15 +43,15 @@ export default class Navigation extends Component {
             </div>
         )
     }
-
+    
     render() {
         return (
-                <nav className='Navigation'>
-                    <div><Link to='/'><img src={logo} className='logo' alt="KnowYourGov logo"></img></Link></div>
-                    <ul className='Navigation-items'>
-                        { TokenService.hasAuthToken() ? this.renderLogoutLink() : this.renderLoginLink() }
-                    </ul>
-                </nav>
+            <nav className='Navigation'>
+                <div><Link to='/'><img src={logo} className='logo' alt="KnowYourGov logo"></img></Link></div>
+                <ul className='Navigation-items'>
+                    { TokenService.hasAuthToken() ? this.renderLogoutLink() : this.renderLoginLink() }
+                </ul>
+            </nav>
         )
     }
 }

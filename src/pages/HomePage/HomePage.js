@@ -6,6 +6,8 @@ import { AppContext } from '../../components/AppProvider/AppProvider'
 
 class HomePage extends Component {
 
+    static contextType = AppContext;
+
     render() {
         return (
             <AppContext.Consumer>

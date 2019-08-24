@@ -9,8 +9,7 @@ import Dashboard from '../../pages/Dashboard/Dashboard'
 import PrivateRoute from '../../helpers/PrivateRoute'
 import PublicRoute from '../../helpers/PublicRoute'
 import NotFoundPage from '../../pages/NotFoundPage/NotFoundPage'
-// import ProfileSettings from '../../routes/ProfileSettings/ProfileSettings'
-// import Notifications from '../../routes/Notifications/Notifications'
+
 
 class AppRouter extends Component {
     state = { 
@@ -48,14 +47,6 @@ class AppRouter extends Component {
                 path={'/dashboard/:user_id'} 
                 component={Dashboard}
               />
-              {/* <PrivateRoute
-                path={'/settings'}
-                component={ProfileSettings}
-              />
-              <PrivateRoute
-                path={'/notifications'}
-                component={Notifications}
-              /> */}
               <PublicRoute 
                 path={'/guest'}
                 component={GuestPage} 
