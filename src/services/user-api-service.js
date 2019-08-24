@@ -2,8 +2,8 @@ import config from '../config'
 import TokenService from './token-service'
 
 const UserApiService = {
-    getUser(userId) {
-        return fetch(`${config.REACT_APP_API_ENDPOINT}/users/${userId}`, {
+    getUser() {
+        return fetch(`${config.REACT_APP_API_ENDPOINT}/users/:user_id`, {
             headers: {
               'authorization': `bearer ${TokenService.getAuthToken()}`,
             },
