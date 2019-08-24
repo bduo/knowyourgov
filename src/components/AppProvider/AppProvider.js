@@ -39,7 +39,6 @@ class AppProvider extends Component {
             this.onUserLoad()
         }));
         history.push('/dashboard/:user_id')
-
     }
     
     onUserLoad = () => {
