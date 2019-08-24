@@ -25,12 +25,12 @@ function CongressPersons() {
                             <h4 className='Rep-party'>{value.state.congress1.party}</h4>
                             <div className='Address-container'>
                                 <address className='Rep-address'>
-                                    <li>{value.state.congress1Address.line1}</li>
+                                    {/* <li>{value.state.congress1Address.line1}</li>
                                     <li>{value.state.congress1Address.line2}</li>
                                     <li>{value.state.congress1Address.line3}</li>
                                     <li>{value.state.congress1Address.city}</li>
                                     <li>{value.state.congress1Address.state}</li>
-                                    <li>{value.state.congress1Address.zip}</li>
+                                    <li>{value.state.congress1Address.zip}</li> */}
                                     <div className='Phone-link-desktop'>
                                         <img src={PhoneIcon} alt={'phone icon'} className='Phone-icon'/>
                                         <a href={`tel:${value.state.congress1.phones}`} className='Rep-phone'>{value.state.congress1.phones}</a>
@@ -59,11 +59,11 @@ function CongressPersons() {
                             }
                             <h4 className='Rep-party'>{value.state.congress2.party}</h4>
                             <address className='Rep-address'>
-                                <li>{value.state.congress2Address.line1}</li>
+                                {/* <li>{value.state.congress2Address.line1}</li>
                                 <li>{value.state.congress2Address.line2}</li>
                                 <li>{value.state.congress2Address.city}</li>
                                 <li>{value.state.congress2Address.state}</li>
-                                <li>{value.state.congress2Address.zip}</li>
+                                <li>{value.state.congress2Address.zip}</li> */}
                                 <div className='Phone-link-desktop'>
                                     <img src={PhoneIcon} alt={'phone icon'} className='Phone-icon'/>
                                     <a href={`tel:${value.state.congress2.phones}`} className='Rep-phone'>{value.state.congress2.phones}</a>

@@ -9,11 +9,11 @@ const UserService = {
   clearUserObj() {
     window.localStorage.removeItem('user')
   },
-  // getUserAddress() {
-  //   let user = this.getUserObj();
-  //   let addRes = Object.assign({}, ...Object.keys(user).map(res => ({street_address: user.street_address, city: user.city, state_code: user.state_code})))
-  //   return addRes
-  // },
+  getUserAddress() {
+    let user = this.getUserObj();
+    let addRes = Object.assign({}, ...Object.keys(user).map(res => ({street_address: user.street_address, city: user.city, state_code: user.state_code})))
+    return addRes
+  },
 }
 
 export default UserService

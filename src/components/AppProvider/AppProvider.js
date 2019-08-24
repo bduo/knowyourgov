@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
 import Promise from 'promise'
+import UserApiService from '../../services/user-api-service'
+import history from '../../history'
+// import UserService from '../../services/user-service'
  
 export const AppContext = React.createContext()
 
@@ -7,27 +10,14 @@ class AppProvider extends Component {
     
     state = {
         congress1: [],
-        congress1Address: [],
         congress2: [],
-        congress2Address: [],
         senator1: [],
-        senator1Address: [],
         senator2: [],
-        senator2Address: [],
         governor: [],
-        governorAddress: [],
         isSubmitted: false,
         error: null,
+        user: {},
      }
-
-    // componentDidUpdate(prevProps, prevState) {
-    //     if (prevState.state !== this.state) {
-    //         history.push({
-    //             pathname: '/guest',
-    //             state: { state: 'state'}
-    //         });
-    //     }
-    // }
  
     checkStatus = (response) => {
         if (response.ok) {
@@ -40,6 +30,22 @@ class AppProvider extends Component {
     parseJSON = (response) => {
         return response.json();
     }
+
+    handleLoginSuccess = (userId) => {
+        UserApiService.getUser(userId)
+        .then(user => this.setState({
+            user
+        }, () => {
+            this.onUserLoad()
+        }));
+        history.push('/dashboard/:user_id')
+
+    }
+    
+    onUserLoad = () => {
+        console.log(this.state)
+        this.handleSearch(this.state.user.street_address, this.state.user.city, this.state.user.state_code)
+    }
     
     handleSearch = (address, city, stateCode)  => {
         const API_KEY = process.env.REACT_APP_CIVIC_API_KEY;
@@ -47,7 +53,7 @@ class AppProvider extends Component {
             fetch(url1)
                 .then(this.checkStatus)
                 .then(this.parseJSON) 
-                .then(this.validateAddressFields)
+                .then()
                 .then(data => {
                     this.setState({
                         isSubmitted: true,
@@ -92,7 +98,8 @@ class AppProvider extends Component {
                         ...this.state
                     },
                     actions: {
-                        handleSearch: this.handleSearch
+                        handleSearch: this.handleSearch,
+                        handleLoginSuccess: this.handleLoginSuccess
                     },
                 }}>   
                 {this.props.children}
