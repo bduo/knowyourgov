@@ -24,11 +24,6 @@ function Senators() {
                             }
                             <h4 className='Rep-party'>{value.state.senator1.party}</h4>
                             <address className='Rep-address'>
-                                {/* <li>{value.state.senator1Address.line1}</li>
-                                <li>{value.state.senator1Address.line2}</li>
-                                <li>{value.state.senator1Address.city}</li>
-                                <li>{value.state.senator1Address.state}</li>
-                                <li>{value.state.senator1Address.zip}</li> */}
                                 <div className='Phone-link-desktop'>
                                     <img src={PhoneIcon} alt={'phone icon'} className='Phone-icon'/>
                                     <a href={`tel:${value.state.senator1.phones}`} className='Rep-phone'>{value.state.senator1.phones}</a>
@@ -56,11 +51,6 @@ function Senators() {
                             }
                             <h4 className='Rep-party'>{value.state.senator2.party}</h4>
                             <address className='Rep-address'>
-                                {/* <li>{value.state.senator2Address.line1}</li>
-                                <li>{value.state.senator2Address.line2}</li>
-                                <li>{value.state.senator2Address.city}</li>
-                                <li>{value.state.senator2Address.state}</li>
-                                <li>{value.state.senator2Address.zip}</li> */}
                                 <div className='Phone-link-desktop'>
                                     <img src={PhoneIcon} alt={'phone icon'} className='Phone-icon'/>
                                     <a href={`tel:${value.state.senator2.phones}`} className='Rep-phone'>{value.state.senator2.phones}</a>

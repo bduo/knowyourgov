@@ -1,16 +1,11 @@
 import React, { Component } from 'react'
 import RegisterForm from '../../components/RegisterForm/RegisterForm'
 import './RegisterPage.css'
+import history from '../../history'
 
 export default class RegisterPage extends Component {
-    static defaultProps = {
-        history: {
-          push: () => {},
-        },
-    }
     
     handleRegistrationSuccess = () => {
-        const { history } = this.props
         history.push('/login')
     }
 
