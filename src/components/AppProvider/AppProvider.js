@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import Promise from 'promise'
 import UserApiService from '../../services/user-api-service'
 import history from '../../history'
-// import UserService from '../../services/user-service'
  
 export const AppContext = React.createContext()
 
