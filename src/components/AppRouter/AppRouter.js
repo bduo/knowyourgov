@@ -16,8 +16,7 @@ class AppRouter extends Component {
       errorPresent: false
     }
     
-    static getDerivedStateFromError(error) {
-      console.error(error)
+    static getDerivedStateFromError() {
       return { errorPresent: true }
     }
 
@@ -28,7 +27,7 @@ class AppRouter extends Component {
           <Navigation />
         </header> 
           <main className='App_main'>
-            {this.state.errorPresent && <p className='Error-message'>We have an error! Please try again!</p>}
+            
             <Switch>
               <PublicRoute
                 exact
@@ -55,6 +54,7 @@ class AppRouter extends Component {
                 component={NotFoundPage}
               />
           </Switch>
+          {this.state.errorPresent && <p className='Error-message'>We have an error! Please try again!</p>}
         </main>
       </div>
     );
