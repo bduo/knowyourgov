@@ -10,7 +10,7 @@ Know Your Gov provides users with their elected representatives information at t
 
 ## Features 
 - Find out your representatives information at the state and federal levels
-- Register for an account to save your representatives information for reference
+- Register for an account to save your representatives information for future reference
 
 ## APIs Used
 - Google Civic Info API
@@ -45,7 +45,7 @@ Know Your Gov provides users with their elected representatives information at t
 
 **Get user profile from database**
 
-- `GET /users/${userId}`
+- `GET /users/:user_id`
 
 ## Google Civic Info API
 
