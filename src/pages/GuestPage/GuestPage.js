@@ -6,6 +6,7 @@ import { AppContext } from '../../components/AppProvider/AppProvider'
 import Footer from '../../components/Footer/Footer'
 import './GuestPage.css'
 
+// Guest Page component renders the users representatives data when they are not logged into the app.
 function GuestPage() {
     return (
         <AppContext.Consumer>

@@ -10,6 +10,7 @@ import PhoneIcon from '../../images/KYGphone_icon.svg';
 import WebsiteIcon from '../../images/KYGwebsite_icon.svg';
 import EmailIcon from '../../images/KYGemail_icon.svg';
 
+// Governor component that consumes representative data from the AppProvider
 function Governor() {
     return (
         <AppContext.Consumer>

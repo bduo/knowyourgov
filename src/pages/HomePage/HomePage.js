@@ -4,6 +4,7 @@ import './HomePage.css'
 import Footer from '../../components/Footer/Footer'
 import { AppContext } from '../../components/AppProvider/AppProvider'
 
+// Landing page for the app
 class HomePage extends Component {
 
     static contextType = AppContext;

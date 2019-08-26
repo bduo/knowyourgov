@@ -31,6 +31,7 @@ class AppProvider extends Component {
         return response.json();
     }
 
+    // Gets user info from database, extracts the address and feeds it to the fetch calls in handleSearch() 
     handleLoginSuccess = (userId) => {
         UserApiService.getUser(userId)
         .then(user => this.setState({

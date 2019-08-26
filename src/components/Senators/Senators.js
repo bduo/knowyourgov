@@ -10,6 +10,7 @@ import PhoneIcon from '../../images/KYGphone_icon.svg';
 import WebsiteIcon from '../../images/KYGwebsite_icon.svg';
 import EmailIcon from '../../images/KYGemail_icon.svg';
 
+// Senators component that consumes representatives data from the AppProvider
 function Senators() {
     return (
         <AppContext.Consumer>

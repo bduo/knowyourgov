@@ -12,10 +12,12 @@ import NotFoundPage from '../../pages/NotFoundPage/NotFoundPage'
 
 
 class AppRouter extends Component {
+    
     state = { 
       errorPresent: false
     }
     
+    // Error handling
     static getDerivedStateFromError(error) {
       console.error('Error:', error)
       return { errorPresent: true }
@@ -26,7 +28,8 @@ class AppRouter extends Component {
       <div className='AppRouter'>
         <header className='App_navigation'>
           <Navigation />
-        </header> 
+        </header>
+        {this.state.errorPresent && <p className='Error-message'>We have an error! Please try again!</p>} 
           <main className='App_main'>
             <Switch>
               <PublicRoute
@@ -55,7 +58,6 @@ class AppRouter extends Component {
               />
           </Switch>
         </main>
-        {this.state.errorPresent && <p className='Error-message'>We have an error! Please try again!</p>}
       </div>
     );
   }

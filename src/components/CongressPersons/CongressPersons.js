@@ -10,6 +10,7 @@ import PhoneIcon from '../../images/KYGphone_icon.svg';
 import WebsiteIcon from '../../images/KYGwebsite_icon.svg';
 import EmailIcon from '../../images/KYGemail_icon.svg';
 
+// Congresspersons component that consumes representatives data from the AppProvider
 function CongressPersons() {
     return (
         <AppContext.Consumer>
@@ -23,25 +24,23 @@ function CongressPersons() {
                                : <img src={value.state.congress1.photoUrl} alt={value.state.congress1.name} className='Rep-photo' />
                             }
                             <h4 className='Rep-party'>{value.state.congress1.party}</h4>
-                            <div className='Address-container'>
-                                <address className='Rep-address'>
-                                    <div className='Phone-link-desktop'>
-                                        <img src={PhoneIcon} alt={'phone icon'} className='Phone-icon'/>
-                                        <a href={`tel:${value.state.congress1.phones}`} className='Rep-phone'>{value.state.congress1.phones}</a>
-                                    </div>
-                                    <a href={`tel:${value.state.congress1.phones}`} ><img src={CallButton} alt={'Call your representative button'} className='Rep-phone-button' /></a>
-                                    <div className='Website-link-desktop'>
-                                        <img src={WebsiteIcon} alt={'website icon'} className='Website-icon'/>
-                                        <a href={value.state.congress1.urls} target='_blank' rel='noopener noreferrer' className='Website-link-style' >Website</a>
-                                    </div>
-                                    <a href={value.state.congress1.urls} target='_blank' rel='noopener noreferrer' ><img src={WebsiteButton} className='Rep-url-button' alt={'Representatives Website button'}/></a>
-                                    <div className='Email-link-desktop'>
-                                        <img src={EmailIcon} alt={'email icon'} className='Email-icon'/>
-                                        <a href={`mailto:${value.state.congress1.emails}`} className='Rep-email-desktop'>Email</a>
-                                    </div>
-                                    <a href={`mailto:${value.state.congress1.emails}`} ><img src={EmailButton} className='Rep-email-button' alt={'Email representative button'} /></a>
-                                </address>
-                            </div>
+                            <address className='Rep-address'>
+                                <div className='Phone-link-desktop'>
+                                    <img src={PhoneIcon} alt={'phone icon'} className='Phone-icon'/>
+                                    <a href={`tel:${value.state.congress1.phones}`} className='Rep-phone'>{value.state.congress1.phones}</a>
+                                </div>
+                                <a href={`tel:${value.state.congress1.phones}`} ><img src={CallButton} alt={'Call your representative button'} className='Rep-phone-button' /></a>
+                                <div className='Website-link-desktop'>
+                                    <img src={WebsiteIcon} alt={'website icon'} className='Website-icon'/>
+                                    <a href={value.state.congress1.urls} target='_blank' rel='noopener noreferrer' className='Website-link-style' >Website</a>
+                                </div>
+                                <a href={value.state.congress1.urls} target='_blank' rel='noopener noreferrer' ><img src={WebsiteButton} className='Rep-url-button' alt={'Representatives Website button'}/></a>
+                                <div className='Email-link-desktop'>
+                                    <img src={EmailIcon} alt={'email icon'} className='Email-icon'/>
+                                    <a href={`mailto:${value.state.congress1.emails}`} className='Rep-email-desktop'>Email</a>
+                                </div>
+                                <a href={`mailto:${value.state.congress1.emails}`} ><img src={EmailButton} className='Rep-email-button' alt={'Email representative button'} /></a>
+                            </address>
                         </div>
                     </ErrorBoundary>
                     <ErrorBoundary>   
