@@ -16,6 +16,11 @@ input::placeholder {
     color: #f25f5c;
 }
 
+-moz-input::placeholder { 
+    color: #f25f5c;
+    opacity: 1 !important;
+}
+
 .Address_searchbox:focus {
     outline: none !important;
     border:1px solid #f25f5c;
