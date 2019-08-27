@@ -1,9 +1,4 @@
 /* Mobile Media Query */
-@media (max-width: 480px) {
-
-    body{
-        -webkit-text-size-adjust: none;
-    }
 
     .Guest-section {
         margin-top: 40px;
@@ -47,14 +42,9 @@
     .Website-link-style, .Email-icon {
         display: none;
     }
-}
 
 /* Tablet Media Query */
 @media (min-width: 481px) and (max-width: 768px) {
-    
-    body{
-        -webkit-text-size-adjust: none;
-    }
 
     Footer {
         margin-top: 80px;
@@ -120,10 +110,6 @@
 
 /* Desktop Media Query */
 @media (min-width: 769px) and (max-width: 4000px) {
-
-    body{
-        -webkit-text-size-adjust: none;
-    }
 
     Footer {
         margin-top: 90px;

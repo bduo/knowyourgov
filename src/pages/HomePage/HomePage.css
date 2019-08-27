@@ -65,6 +65,18 @@ html {
     margin-top: 40px;
 }
 
+.Demo-title {
+    text-align: center;
+    color: #fff;
+    margin-bottom: -8px;
+}
+
+.Demo-text {
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+}
+
 /* Tablet Media Query */
 @media (min-width: 481px) and (max-width: 768px) {
     .App-info-text {
