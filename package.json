@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://knowyourgov.brandonelhaj.now.sh/",
   "dependencies": {
+    "eslint-utils": "^1.4.2",
     "js-yaml": "^3.13.1",
     "jwt-decode": "^2.2.0",
     "lodash": "^4.17.15",
