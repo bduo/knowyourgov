@@ -5,10 +5,6 @@ import AppProvider from './components/AppProvider/AppProvider';
 import AppRouter from './components/AppRouter/AppRouter';
 import history from './history'
 import './index.css';
-import 'core-js/fn/number/is-nan'; 
-import 'core-js/es7/'; 
-import 'core-js/es6/'; 
-import 'raf/polyfill';
 
 ReactDOM.render(
     <Router history={history}>
