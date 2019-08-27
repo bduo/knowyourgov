@@ -1,51 +1,65 @@
 /* Mobile Media Query */
+@media (max-width: 480px) {
 
-.Guest-section {
-    margin-top: 40px;
-    justify-content: center;
+    body{
+        -webkit-text-size-adjust: none;
+    }
+
+    .Guest-section {
+        margin-top: 40px;
+        justify-content: center;
+    }
+
+    .Guest-title {
+        margin-top: 50px;
+        text-align: center;
+        font-family: 'Bungee Shade', cursive;
+        color: #fff;
+        font-size: 40px;
+    }
+
+    .Rep-phone {
+        display: none;
+    }
+
+    .Rep-email-desktop {
+        display: none;
+    }
+
+    .Rep-phone-button {
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 15px;
+        margin-bottom: 20px;
+    } 
+
+    .Rep-email-button {
+        margin-top: 14px;
+    }
+
+    .Congress2, .Senator1, 
+    .Senator2, .Governor {
+        margin-top: 37px;
+    }
+
+    .Phone-icon, .Website-icon,
+    .Website-link-style, .Email-icon {
+        display: none;
+    }
 }
-
-.Guest-title {
-    margin-top: 50px;
-    text-align: center;
-    font-family: 'Bungee Shade', cursive;
-    color: #fff;
-    font-size: 40px;
-}
-
-.Rep-phone {
-    display: none;
-}
-
-.Rep-email-desktop {
-    display: none;
-}
-
-.Rep-phone-button {
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 15px;
-    margin-bottom: 20px;
-} 
-
-.Rep-email-button {
-    margin-top: 14px;
-}
-
-.Congress2, .Senator1, 
-.Senator2, .Governor {
-    margin-top: 37px;
-}
-
-.Phone-icon, .Website-icon,
-.Website-link-style, .Email-icon {
-    display: none;
-}
-
 
 /* Tablet Media Query */
 @media (min-width: 481px) and (max-width: 768px) {
+    
+    body{
+        -webkit-text-size-adjust: none;
+    }
+
+    Footer {
+        margin-top: 80px;
+    }
+    
     .Rep-phone {
         display: block;
     }
@@ -102,14 +116,14 @@
         text-decoration: none;
     }
 
-    Footer {
-        margin-top: 80px;
-    }
-
 }
 
 /* Desktop Media Query */
 @media (min-width: 769px) and (max-width: 4000px) {
+
+    body{
+        -webkit-text-size-adjust: none;
+    }
 
     Footer {
         margin-top: 90px;

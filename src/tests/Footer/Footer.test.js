@@ -1,6 +1,6 @@
-import React from 'react';
-import Footer from '../../components/Footer/Footer';
-import FooterLoggedIn from '../../components/Footer/FooterLoggedIn';
+import React from 'react'
+import Footer from '../../components/Footer/Footer'
+import FooterLoggedIn from '../../components/Footer/FooterLoggedIn'
 import ReactDOM from 'react-dom';
 
 describe('Footer Components', () => {

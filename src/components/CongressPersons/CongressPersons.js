@@ -2,13 +2,13 @@ import React from 'react'
 import './CongressPersons.css'
 import { AppContext } from '../AppProvider/AppProvider'
 import ErrorBoundary from '../ErrorBoundary'
-import NoImgSvg from '../../images/user.svg';
-import CallButton from '../../images/KYGcallyourrep.svg';
-import WebsiteButton from '../../images/KYGwebsite.svg';
-import EmailButton from '../../images/KYGemail.svg';
-import PhoneIcon from '../../images/KYGphone_icon.svg';
-import WebsiteIcon from '../../images/KYGwebsite_icon.svg';
-import EmailIcon from '../../images/KYGemail_icon.svg';
+import NoImgSvg from '../../images/user.svg'
+import CallButton from '../../images/KYGcallyourrep.svg'
+import WebsiteButton from '../../images/KYGwebsite.svg'
+import EmailButton from '../../images/KYGemail.svg'
+import PhoneIcon from '../../images/KYGphone_icon.svg'
+import WebsiteIcon from '../../images/KYGwebsite_icon.svg'
+import EmailIcon from '../../images/KYGemail_icon.svg'
 
 // Congresspersons component that consumes representatives data from the AppProvider
 function CongressPersons() {

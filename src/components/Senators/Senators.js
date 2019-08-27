@@ -1,14 +1,14 @@
 import React from 'react'
 import './Senators.css'
-import { AppContext } from '../AppProvider/AppProvider';
-import ErrorBoundary from '../ErrorBoundary';
-import noImgSvg from '../../images/user.svg';
-import CallButton from '../../images/KYGcallyourrep.svg';
-import WebsiteButton from '../../images/KYGwebsite.svg';
-import EmailButton from '../../images/KYGemail.svg';
-import PhoneIcon from '../../images/KYGphone_icon.svg';
-import WebsiteIcon from '../../images/KYGwebsite_icon.svg';
-import EmailIcon from '../../images/KYGemail_icon.svg';
+import { AppContext } from '../AppProvider/AppProvider'
+import ErrorBoundary from '../ErrorBoundary'
+import noImgSvg from '../../images/user.svg'
+import CallButton from '../../images/KYGcallyourrep.svg'
+import WebsiteButton from '../../images/KYGwebsite.svg'
+import EmailButton from '../../images/KYGemail.svg'
+import PhoneIcon from '../../images/KYGphone_icon.svg'
+import WebsiteIcon from '../../images/KYGwebsite_icon.svg'
+import EmailIcon from '../../images/KYGemail_icon.svg'
 
 // Senators component that consumes representatives data from the AppProvider
 function Senators() {

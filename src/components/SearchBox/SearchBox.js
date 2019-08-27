@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './SearchBox.css'
-import { AppContext } from '../AppProvider/AppProvider';
+import { AppContext } from '../AppProvider/AppProvider'
 import history from '../../history'
 
 class SearchBox extends Component {

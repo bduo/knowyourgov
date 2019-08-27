@@ -4,7 +4,7 @@ import'./Navigation.css'
 import history from '../../history'
 import TokenService from '../../services/token-service'
 import logo from '../../images/logo.svg'
-import { AppContext } from '../../components/AppProvider/AppProvider';
+import { AppContext } from '../../components/AppProvider/AppProvider'
 
 export default class Navigation extends Component {
 
