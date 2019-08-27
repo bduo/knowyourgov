@@ -42,7 +42,7 @@ footer {
 /* Tablet Media Query */
 @media (min-width: 481px) and (max-width: 768px) {
     footer {
-        display: flex
+        display: flex;
     }
     .column {
         flex: 2;
@@ -52,7 +52,7 @@ footer {
 /* Desktop Media Query */
 @media (min-width: 769px) and (max-width: 4000px) {
     footer {
-        display: flex
+        display: flex;
     }
     .column {
         flex: 2;
