@@ -78,6 +78,11 @@ html {
     font-weight: bold;
 }
 
+/* Turns off dotted selection box for Firefox */
+button::-moz-focus-inner {
+    border: 0;
+  }
+  
 /* Tablet Media Query */
 @media (min-width: 481px) and (max-width: 768px) {
     .App-info-text {

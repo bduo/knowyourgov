@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Promise from 'promise'
 import UserApiService from '../../services/user-api-service'
 import history from '../../history'
  
@@ -21,9 +20,9 @@ class AppProvider extends Component {
 
     checkStatus = (response) => {
         if (response.ok) {
-          return Promise.resolve(response);
+          return response;
         } else {
-          return Promise.reject(new Error(response.statusText));
+          throw new Error(response.statusText);
         }
     }
     
