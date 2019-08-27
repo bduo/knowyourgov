@@ -4,7 +4,6 @@ import Senators from '../../components/Senators/Senators'
 import Governor from '../../components/Governor/Governor'
 import { AppContext } from '../../components/AppProvider/AppProvider'
 import FooterLoggedIn from '../../components/Footer/FooterLoggedIn'
-import './Dashboard.css'
 
 // Dashboard component renders the users representatives data when logged in to the app. 
 export default class Dashboard extends Component {

@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import LoginForm from '../../components/LoginForm/LoginForm'
-import './LoginPage.css'
 import { AppContext } from '../../components/AppProvider/AppProvider';
 
 export default class LoginPage extends Component {
