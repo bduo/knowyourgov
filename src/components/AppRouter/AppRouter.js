@@ -10,7 +10,6 @@ import PrivateRoute from '../../helpers/PrivateRoute'
 import PublicRoute from '../../helpers/PublicRoute'
 import NotFoundPage from '../../pages/NotFoundPage/NotFoundPage'
 
-
 class AppRouter extends Component {
     
     state = { 
