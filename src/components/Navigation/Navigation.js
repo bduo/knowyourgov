@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Link, Redirect } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import'./Navigation.css'
 import history from '../../history'
 import TokenService from '../../services/token-service'
@@ -47,7 +47,7 @@ export default class Navigation extends Component {
     render() {
         return (
             <nav className='Navigation'>
-                <div><Link to='/'><Redirect to='/'><img src={logo} className='logo' alt="KnowYourGov logo"></img></Redirect></Link></div>
+                <div><Link to='/'><img src={logo} className='logo' alt="KnowYourGov logo"></img></Link></div>
                 <ul className='Navigation-items'>
                     { TokenService.hasAuthToken() ? this.renderLogoutLink() : this.renderLoginLink() }
                 </ul>
