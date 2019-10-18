@@ -1,7 +1,7 @@
 # Know Your Gov
 
 **Check it out!** - https://knowyourgov.brandonelhaj.now.sh<br/>
-**Know Your Gov Backend Repo** - https://github.com/bduo/knowyourgov-backend
+**Know Your Gov Backend API Repo** - https://github.com/bduo/knowyourgov-backend
 
 ![Know Your Gov App Screenshot](/src/images/knowyourgov_home.png "Know Your Gov")
 
