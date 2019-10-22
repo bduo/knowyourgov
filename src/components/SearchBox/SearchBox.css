@@ -3,13 +3,14 @@
     width: 300px;
     display: block;
     margin: 0 auto;
-    padding-left: 20px;
+    padding-left: 0;
     margin-bottom: 20px;
     background-color: #f6f4f3;
     color: #f25f5c;
     border-radius: 10px;
     border: 0;
     font-family: 'Roboto', sans-serif;
+    text-align: center;
 }
 
 input::placeholder {
@@ -19,7 +20,7 @@ input::placeholder {
 
 .Address_searchbox:focus {
     outline: none !important;
-    border:1px solid #f25f5c;
+    border:2px solid #f25f5c;
     box-shadow: 0 0 10px #f25f5c;
     border-radius: 10px;
 }
@@ -42,5 +43,18 @@ input::placeholder {
     color: #f6f4f3;
 }
 
+/* Tablet Media Query */
+@media (min-width: 481px) and (max-width: 768px) {
+    .Address_searchbox {
+        padding-left: 20px;
+        text-align: left;
+    }
+}    
 
-
+/* Desktop Media Query */
+@media (min-width: 769px) and (max-width: 4000px) {
+    .Address_searchbox {
+        padding-left: 20px;
+        text-align: left;
+    }
+}
