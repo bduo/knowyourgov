@@ -9,7 +9,7 @@
     "jwt-decode": "^2.2.0",
     "lodash": "^4.17.15",
     "lodash.template": "^4.5.0",
-    "now": "^16.1.2",
+    "now": "^16.4.0",
     "promise": "^8.0.3",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
